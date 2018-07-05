@@ -1,0 +1,2 @@
+cinza - color: '#576574' 
+branco - '#f5f6fa'
