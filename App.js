@@ -1,34 +1,24 @@
-import React, { Component } from 'react';
 import { createStackNavigator } from 'react-navigation';
-import PrimaryLoginPage from './src/pages/PrimaryLoginPage';
 
-
-
-
-
+import MenuPage from './src/pages/MenuPage';
 
 export default createStackNavigator({
-
-
-  'PrimaryLogin':{
-    screen: PrimaryLoginPage
-  }
-
-
-},{
-  navigationOptions:{
-    title: "SoftMobile",
-    headerTintColor: "#ecf0f1",
-    headerStyle:{
-      backgroundColor: "#8e44ad",
-     
-    },
-    headerTitleStyle:{
-      color: "#ecf0f1",
-      fontSize: 25,
-      textAlign: 'center',
-
+    'MenuPage': {
+        screen: MenuPage,
+        navigationOptions:{
+          title: 'Menu'
+        }
     }
-  }
-
+}, {
+  navigationOptions: {
+       title: "SoftMoble",
+       headerTintColor: 'white',
+       headerStyle: {
+            backgroundColor: '#e24d4d',
+       },
+       headerTitleStyle: {
+           color: 'white',
+           fontSize: 25
+       }
+   }
 })

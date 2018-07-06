@@ -8,16 +8,16 @@ import Input from './Input';
  return(
                 <View style={ styles.formContainer }>
                 <View style={ styles.inputContainer }>
-                  <Input 
+                  <Input
                     onChangeText={text => this.onChangeText(text)}
                     value={text}
                   />
                 </View>
                 <View style={ styles.ButtonContainer }>
-                   <Button 
-                        title="ADD" 
+                   <Button
+                        title="ADD"
                         onPress={ () => this.onPress() }
-                    /> 
+                    />
                 </View>
             </View>
         );
