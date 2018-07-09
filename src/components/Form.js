@@ -1,38 +1,29 @@
 import React from 'react';
-import { Text, View, StyleSheet, Button } from 'react-native';
-import Input from './Input';
+import { StyleSheet, View } from 'react-native';
 
- export default class Form extends React.Component{
-     render(){
+const Form = props => {
 
- return(
-                <View style={ styles.formContainer }>
-                <View style={ styles.inputContainer }>
-                  <Input
-                    onChangeText={text => this.onChangeText(text)}
-                    value={text}
-                  />
-                </View>
-                <View style={ styles.ButtonContainer }>
-                   <Button
-                        title="ADD"
-                        onPress={ () => this.onPress() }
-                    />
-                </View>
-            </View>
-        );
+  const { children} = props;
 
-    }
-}
+    return(
+      
+      <View style={styles.senha}  > 
 
+        { children }
+
+      </View>
+    
+    )
+};
 const styles = StyleSheet.create({
-    formContainer:{
-        flexDirection: 'row'
-    },
-    inputContainer:{
-        flex: 4
-    },
-    ButtonContainer:{
-        flex: 1
-    }
+senha: {
+        paddingTop: 10,
+        paddingBottom: 10,
+        borderRadius: 4,
+        backgroundColor: 'transparent',
+        paddingVertical:5
+        
+         }
 })
+
+export default Form;
