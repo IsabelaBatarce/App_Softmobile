@@ -1,17 +1,15 @@
 import React from 'react';
 import { Text, Image, View, StyleSheet, TouchableOpacity } from 'react-native';
 
-export default class ButtonImage extends React.Component {
-  render(){
+const ButtonImage = ({ onPressButton, imgBtnMenu }) => {
     return(
-      <TouchableOpacity onPress={this._onPressButton}>
-        <Image
-          style={styles.button}
-          source={{ uri: 'https://picsum.photos/200/300'}}
-        />
-      </TouchableOpacity>
+        <TouchableOpacity onPress={ onPressButton }>
+          <Image
+            style={styles.button}
+            source={ imgBtnMenu }
+          />
+        </TouchableOpacity>
     )
-  }
 }
 
 const styles = StyleSheet.create({
@@ -20,6 +18,10 @@ const styles = StyleSheet.create({
     height: 120,
     marginTop: 15,
     marginBottom: 15,
-    borderRadius: 6,
-  }
+    borderRadius: 6
+  },
+
+
 })
+
+export default ButtonImage;

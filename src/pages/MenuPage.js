@@ -1,15 +1,25 @@
 import React from 'react';
 import { StyleSheet, Text, View, TouchableOpacity, Image } from 'react-native';
 
-import ButtonImage from '../components/ButtonImage'
+import ButtonImage from '../components/ButtonImage';
 
 export default class MenuPage extends React.Component {
+
   render() {
     return (
       <View style={styles.container}>
-        <ButtonImage/>
-        <ButtonImage/>
-        <ButtonImage/>
+        <ButtonImage
+          imgBtnMenu={require('../images/img_btn_produtos.png')}
+          onPressButton={ () => this.props.navigation.navigate('CategoryItensPage') }
+        />
+        <ButtonImage
+          imgBtnMenu={require('../images/img_btn_clientes.png')}
+          onPressButton={ () => this.props.navigation.navigate('CategoryItensPage') }
+        />
+        <ButtonImage
+          imgBtnMenu={require('../images/img_btn_vendas.png')}
+          onPressButton={ () => this.props.navigation.navigate('CategoryItensPage') }
+        />
       </View>
     );
   }
@@ -17,9 +27,8 @@ export default class MenuPage extends React.Component {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
+    marginTop: 30,
+    alignItems: 'center'
   }
 
 });

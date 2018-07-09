@@ -1,6 +1,8 @@
 import { createStackNavigator } from 'react-navigation';
 import React from 'react';
+
 import MenuPage from './src/pages/MenuPage';
+import CategoryItensPage from './src/pages/CategoryItensPage';
 import PrimaryLogin from './src/pages/PrimaryLogin';
 import { Image } from 'react-native';
 
@@ -41,11 +43,12 @@ const RootStack = createStackNavigator({
       },
 
     'MenuPage': {
-        screen: MenuPage,
-        navigationOptions:{
-          title: 'Menu'
-        }
-      }
+      screen: MenuPage
+    },
+
+    'CategoryItensPage': {
+      screen: CategoryItensPage
+    }
     }, {
   navigationOptions: {
        title: "SoftMobile",
