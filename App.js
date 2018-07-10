@@ -34,8 +34,11 @@ class LogoTitle extends React.Component {
 };
 */
 const RootStack = createStackNavigator({
+    'MenuPage': {
+      screen: MenuPage
+    },
     
-     'Login': {
+    'Login': {
         screen: PrimaryLogin,
         navigationOptions:{
           headerTitle: <LogoTitle />,
@@ -57,11 +60,15 @@ const RootStack = createStackNavigator({
         }
       },
 
+<<<<<<< HEAD
       'MenuPage': {
         screen: MenuPage
     },
 
       'CategoryItensPage': {
+=======
+    'CategoryItensPage': {
+>>>>>>> 158566c38389977991af8de37b82ce1b21a9c8f9
       screen: CategoryItensPage
     }
     },{
