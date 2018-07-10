@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View, TextInput } from 'react-native';
+import { StyleSheet, Text, View, TextInput,Image, TouchableOpacity } from 'react-native';
 
 import Form from '../components/Form';
 import Picker from '../components/Picker';
@@ -11,7 +11,8 @@ export default class PrimaryLogin extends React.Component {
   render() {
     return (
       <View style = {styles.container}>
-      	<Picker />
+      	
+        <Picker />
               
         <Form >
     
@@ -24,9 +25,12 @@ export default class PrimaryLogin extends React.Component {
             />
           
         </Form>
-
-        <ButtonI style = {{ flex: 1, alignItems: 'center', justifyContent: 'center' }} />
-
+        <View  style = {styles.button} >
+            <ButtonI
+          
+          onPressButton={ () => this.props.navigation.navigate('SecondaryLogin') }
+        />        
+        </View>
       </View>
     );
   }
@@ -36,7 +40,6 @@ export default class PrimaryLogin extends React.Component {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        
         padding: 10,
         marginTop: 40
 
@@ -47,6 +50,13 @@ const styles = StyleSheet.create({
         paddingBottom: 18,
         paddingLeft:11,
         paddingVertical: 5,
+        },
+
+        button:{
+            flex: 1, 
+            alignItems: 'center', 
+            justifyContent: 'center',
+            marginBottom: 30
         }
 
 });

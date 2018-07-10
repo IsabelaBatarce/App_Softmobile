@@ -13,7 +13,8 @@ const Input = ({ onChangeText, value }) => (
 const styles = StyleSheet.create({
     input:{
         paddingLeft: 15,
-        paddingBottom: 15
+        paddingBottom: 15,
+        elevation: 2
     }
 })
 
