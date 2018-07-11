@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, TextInput,Text, Button,  Alert, StyleSheet } from 'react-native';
+import { View, TextInput,Text, Button,  Alert, StyleSheet, Image } from 'react-native';
 import RNPickerSelect from 'react-native-picker-select';
 
 export default class PrimaryLoginPage extends React.Component {    
@@ -32,8 +32,10 @@ export default class PrimaryLoginPage extends React.Component {
         return(
       
       <View >
-        <Text>Vendedor(a)</Text>
+      
+
         <RNPickerSelect
+            
             placeholder={{
                 label: 'Selecione o vendedor',
                 value: null,
@@ -74,7 +76,10 @@ export default class PrimaryLoginPage extends React.Component {
         paddingBottom: 12,
         backgroundColor: 'white',
         color: '#636e72',
+        elevation: 2
     },
+
+    
 });      
 
 

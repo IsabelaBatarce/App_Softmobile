@@ -1,6 +1,5 @@
 import React from 'react';
 import { StyleSheet, Text, View, TouchableOpacity, Image, ScrollView } from 'react-native';
-
 import ButtonImageCategory from '../components/ButtonImageCategory'
 
 export default class CategoryItensPage extends React.Component {
