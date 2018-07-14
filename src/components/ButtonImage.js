@@ -18,7 +18,8 @@ const styles = StyleSheet.create({
     height: 120,
     marginTop: 15,
     marginBottom: 15,
-    borderRadius: 6
+    borderRadius: 6,
+    elevation: 4
   },
 
 

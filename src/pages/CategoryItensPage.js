@@ -1,21 +1,43 @@
 import React from 'react';
 import { StyleSheet, Text, View, TouchableOpacity, Image, ScrollView } from 'react-native';
-import ButtonImageCategory from '../components/ButtonImageCategory'
+
+import ButtonItemCategory from '../components/ButtonItemCategory';
+import InputSearch from '../components/InputSearch';
 
 export default class CategoryItensPage extends React.Component {
+
   render() {
     return (
       <ScrollView>
       <View style={styles.container}>
+        <InputSearch
+          placeholder={'Pesquise uma categoria...'}
+        />
         <View style={styles.listCategory}>
-          <ButtonImageCategory nameCategory={'Ferramentas'}/>
-          <ButtonImageCategory nameCategory={'Caixas'}/>
-          <ButtonImageCategory nameCategory={'Roupas'}/>
-          <ButtonImageCategory nameCategory={'Carros'}/>
-          <ButtonImageCategory nameCategory={'Alimentos'}/>
-          <ButtonImageCategory nameCategory={'Livros'}/>
-          <ButtonImageCategory nameCategory={'Eletronicos'}/>
-          <ButtonImageCategory nameCategory={'Papelarias'}/>
+          <ButtonItemCategory nameCategory={'Ferramentas'}/>
+          <ButtonItemCategory nameCategory={'Caixas'}/>
+          <ButtonItemCategory nameCategory={'Roupas'}/>
+          <ButtonItemCategory nameCategory={'Carros'}/>
+          <ButtonItemCategory nameCategory={'Alimentos'}/>
+          <ButtonItemCategory nameCategory={'Livros'}/>
+          <ButtonItemCategory nameCategory={'Eletronicos'}/>
+          <ButtonItemCategory nameCategory={'Papelarias'}/>
+          <ButtonItemCategory nameCategory={'Ferramentas'}/>
+          <ButtonItemCategory nameCategory={'Caixas'}/>
+          <ButtonItemCategory nameCategory={'Roupas'}/>
+          <ButtonItemCategory nameCategory={'Carros'}/>
+          <ButtonItemCategory nameCategory={'Alimentos'}/>
+          <ButtonItemCategory nameCategory={'Livros'}/>
+          <ButtonItemCategory nameCategory={'Eletronicos'}/>
+          <ButtonItemCategory nameCategory={'Papelarias'}/>
+          <ButtonItemCategory nameCategory={'Ferramentas'}/>
+          <ButtonItemCategory nameCategory={'Caixas'}/>
+          <ButtonItemCategory nameCategory={'Roupas'}/>
+          <ButtonItemCategory nameCategory={'Carros'}/>
+          <ButtonItemCategory nameCategory={'Alimentos'}/>
+          <ButtonItemCategory nameCategory={'Livros'}/>
+          <ButtonItemCategory nameCategory={'Eletronicos'}/>
+          <ButtonItemCategory nameCategory={'Papelarias'}/>
         </View>
       </View>
       </ScrollView>
@@ -26,13 +48,13 @@ export default class CategoryItensPage extends React.Component {
 const styles = StyleSheet.create({
 
   container:{
-    height: 900,
+    height: 800,
     alignItems: 'center'
   },
 
   listCategory: {
     display: 'flex',
-    marginTop: 30,
+    marginTop: 10,
     flexWrap: 'wrap',
   }
 

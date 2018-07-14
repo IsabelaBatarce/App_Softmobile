@@ -8,20 +8,20 @@ import {
 import { List, ListItem } from 'react-native-elements';
 
 
- const ListComponent = ({ onPressItemList }) => {
+ const ListComponent = ({ onPressItemList, list }) => {
     return (
       <List>
-      { list.map((l, i) => (
-        <TouchableOpacity onPress={ onPressItemList, nameItem }>
-        <ListItem
-          key={i}
-          title={nameItem}
-        />
-        </TouchableOpacity>
-      ))}
+        {
+          {list}.map((item, i) => (
+            <ListItem
+              key={i}
+              title={item.title}
+              leftIcon={{name: item.icon}}
+            />
+          ))
+        }
       </List>
-    );
-  }
+    )
 }
 
 const styles = StyleSheet.create({

@@ -1,13 +1,15 @@
 import { createStackNavigator } from 'react-navigation';
 import React from 'react';
+import { Image, View } from 'react-native';
 
 import MenuPage from './src/pages/MenuPage';
 import CategoryItensPage from './src/pages/CategoryItensPage';
 import PrimaryLogin from './src/pages/PrimaryLogin';
 import SecondaryLogin from './src/pages/SecondaryLogin';
 import ClientFilterPage from './src/pages/ClientFilterPage';
+import ListProdutsPage from './src/pages/ListProdutsPage';
+import ListClientPage from './src/pages/ListClientPage';
 
-import { Image, View } from 'react-native';
 
 
 class LogoTitle extends React.Component {
@@ -27,17 +29,14 @@ class LogoTitle extends React.Component {
   }
 }
 
-/*class PrimaryLogin extends React.Component {
-  static navigationOptions = ({ navigation }) => {
-    return {
-      headerTitle: <LogoTitle />,
-}
-  }
-};
-*/
 const RootStack = createStackNavigator({
-    'ClientFilterPage':{
-      screen: ClientFilterPage
+
+  'ListClientPage':{
+    screen: ListClientPage
+  },
+
+    'ListProdutsPage':{
+      screen: ListProdutsPage
     },
 
     'Login': {
@@ -62,14 +61,19 @@ const RootStack = createStackNavigator({
         }
       },
 
-      'MenuPage': {
+     'MenuPage': {
         screen: MenuPage
-    },
-
+      },
 
     'CategoryItensPage': {
       screen: CategoryItensPage
-    }
+    },
+
+    'ClientFilterPage':{
+      screen: ClientFilterPage
+    },
+
+
   },{
 
        navigationOptions: {

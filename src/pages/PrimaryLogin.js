@@ -11,25 +11,22 @@ export default class PrimaryLogin extends React.Component {
   render() {
     return (
       <View style = {styles.container}>
-      	
+
         <Picker />
-              
+
         <Form >
-    
-            <TextInput 
+
+            <TextInput
                 style={styles.texto}
                 placeholder= "Digite a senha"
                 secureTextEntry
-                
-    
+
+
             />
-          
+
         </Form>
         <View  style = {styles.button} >
-            <ButtonI
-          
-          onPressButton={ () => this.props.navigation.navigate('SecondaryLogin') }
-        />        
+          <ButtonI onPressButton={ () => this.props.navigation.navigate('SecondaryLogin') } />
         </View>
       </View>
     );
@@ -53,10 +50,10 @@ const styles = StyleSheet.create({
         },
 
         button:{
-            flex: 1, 
-            alignItems: 'center', 
+            flex: 1,
+            alignItems: 'center',
             justifyContent: 'center',
-            marginBottom: 30
+
         }
 
 });

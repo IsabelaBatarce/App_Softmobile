@@ -14,7 +14,7 @@ export default class MenuPage extends React.Component {
         />
         <ButtonImage
           imgBtnMenu={require('../images/img_btn_clientes.png')}
-          onPressButton={ () => this.props.navigation.navigate('CategoryItensPage') }
+          onPressButton={ () => this.props.navigation.navigate('ClientFilterPage') }
         />
         <ButtonImage
           imgBtnMenu={require('../images/img_btn_vendas.png')}
