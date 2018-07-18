@@ -23,6 +23,8 @@ export default class ListProdutsPage extends React.Component {
         <InputSearch placeholder={'Pesquise um produto...'}/>
       </View>
       <View style={styles.container}>
+      
+      <Text style={ styles.title }>Produtos</Text>
       <List>
         {
           list.map((item, i) => (
@@ -44,6 +46,12 @@ export default class ListProdutsPage extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1
+  },
+  title:{
+    fontSize: 25,
+    textAlign: 'center',
+    marginTop: 10,
+    marginBottom: -10
   },
   searchBar:{
     alignItems: 'center'

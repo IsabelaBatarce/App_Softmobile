@@ -10,7 +10,7 @@ import { List, ListItem } from 'react-native-elements';
 
 import InputSearch from '../components/InputSearch';
 
-export default class ListClientPage extends React.Component {
+export default class ListSalesPage extends React.Component {
 
   render() {
     const list = [{ title: 'Trips' },{ title: 'Trips' },{ title: 'Trips' },{ title: 'Trips' },{ title: 'Trips' },{ title: 'Trips' }
@@ -20,10 +20,11 @@ export default class ListClientPage extends React.Component {
     return (
       <ScrollView>
       <View style={ styles.searchBar }>
-        <InputSearch placeholder={'Pesquise um cliente...'}/>
+        <InputSearch placeholder={'Pesquise uma venda...'}/>
       </View>
       <View style={styles.container}>
-      <Text style={ styles.title }>Clientes</Text>
+
+      <Text style={ styles.title }>Vendas</Text>
       <List>
         {
           list.map((item, i) => (
@@ -44,15 +45,15 @@ export default class ListClientPage extends React.Component {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-  },
-  searchBar:{
-    alignItems: 'center'
+    flex: 1
   },
   title:{
     fontSize: 25,
     textAlign: 'center',
     marginTop: 10,
     marginBottom: -10
+  },
+  searchBar:{
+    alignItems: 'center'
   }
 });

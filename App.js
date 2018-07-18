@@ -9,8 +9,9 @@ import SecondaryLogin from './src/pages/SecondaryLogin';
 import ClientFilterPage from './src/pages/ClientFilterPage';
 import ListProdutsPage from './src/pages/ListProdutsPage';
 import ListClientPage from './src/pages/ListClientPage';
-
-
+import ListSalesPage from './src/pages/ListSalesPage';
+import ProductDetailsPage from './src/pages/ProductDetailsPage';
+import ClientDetailsPage from './src/pages/ClientDetailsPage';
 
 class LogoTitle extends React.Component {
 
@@ -30,13 +31,8 @@ class LogoTitle extends React.Component {
 }
 
 const RootStack = createStackNavigator({
-
-  'ListClientPage':{
-    screen: ListClientPage
-  },
-
-    'ListProdutsPage':{
-      screen: ListProdutsPage
+    'ListSalesPage':{
+      screen: ListSalesPage
     },
 
     'Login': {
@@ -50,20 +46,20 @@ const RootStack = createStackNavigator({
         }
       },
 
-      'SecondaryLogin':{
-        screen: SecondaryLogin,
-        navigationOptions:{
-          headerTitle: <LogoTitle />,
-        headerStyle: {
-            backgroundColor: '#e24d4d',
-            height: 250
-            }
-        }
-      },
+    'SecondaryLogin':{
+      screen: SecondaryLogin,
+      navigationOptions:{
+        headerTitle: <LogoTitle />,
+      headerStyle: {
+          backgroundColor: '#e24d4d',
+          height: 250
+          }
+      }
+    },
 
-     'MenuPage': {
-        screen: MenuPage
-      },
+    'MenuPage': {
+      screen: MenuPage
+    },
 
     'CategoryItensPage': {
       screen: CategoryItensPage
@@ -73,6 +69,21 @@ const RootStack = createStackNavigator({
       screen: ClientFilterPage
     },
 
+    'ListClientPage':{
+      screen: ListClientPage
+    },
+
+    'ClientDetailsPage': {
+      screen: ClientDetailsPage
+    },
+
+    'ListProdutsPage':{
+      screen: ListProdutsPage
+    },
+
+    'ProductDetailsPage': {
+      screen: ProductDetailsPage
+    }
 
   },{
 
