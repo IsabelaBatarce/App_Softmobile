@@ -1,6 +1,7 @@
 import { createStackNavigator } from 'react-navigation';
 import React from 'react';
-import { Image, View } from 'react-native';
+import { Image, View, TouchableOpacity, Text } from 'react-native';
+
 
 import MenuPage from './src/pages/MenuPage';
 import CategoryItensPage from './src/pages/CategoryItensPage';
@@ -12,6 +13,7 @@ import ListClientPage from './src/pages/ListClientPage';
 import ListSalesPage from './src/pages/ListSalesPage';
 import ProductDetailsPage from './src/pages/ProductDetailsPage';
 import ClientDetailsPage from './src/pages/ClientDetailsPage';
+
 
 class LogoTitle extends React.Component {
 
@@ -28,7 +30,9 @@ class LogoTitle extends React.Component {
       </View>
     );
   }
-}
+};
+
+
 
 const RootStack = createStackNavigator({
     'ListSalesPage':{
