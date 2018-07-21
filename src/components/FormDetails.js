@@ -26,7 +26,7 @@ const styles = StyleSheet.create({
     marginBottom: 10
   },
   input:{
-    fontSize: 28,
+    fontSize: 16,
     marginTop: 1,
     marginBottom: 1,
     marginRight: 10,
@@ -35,7 +35,8 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     elevation: 1,
     backgroundColor: '#fcfcfc',
-    height: 40
+    height: 40,
+    color: '#2d3436'
   }
 });
 export default FormDetails;

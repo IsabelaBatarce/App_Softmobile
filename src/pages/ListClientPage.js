@@ -13,15 +13,12 @@ import InputSearch from '../components/InputSearch';
 export default class ListClientPage extends React.Component {
 
   render() {
-    const list = [{ title: 'Trips' },{ title: 'Trips' },{ title: 'Trips' },{ title: 'Trips' },{ title: 'Trips' },{ title: 'Trips' }
-                ,{ title: 'Trips' },{ title: 'Trips' },{ title: 'Trips' },{ title: 'Trips' },{ title: 'Trips' },{ title: 'Trips' },{ title: 'Trips' }
-                ,{ title: 'Trips' },{ title: 'Trips' },{ title: 'Trips' },{ title: 'Trips' },{ title: 'Trips' },{ title: 'Trips' },{ title: 'Trips' }
-                ,{ title: 'Trips' },{ title: 'Trips' },{ title: 'Trips' },{ title: 'Trips' },{ title: 'Trips' },{ title: 'Trips' },{ title: 'Trips' }]
+    const list = [{ title: 'Trips', subtitle: 'Nome empresa' },{ title: 'Trips', subtitle: 'Nome empresa'  },{ title: 'Trips', subtitle: 'Nome empresa'},{ title: 'Trips', subtitle: 'Nome empresa'},{ title: 'Trips', subtitle: 'Nome empresa'  },{ title: 'Trips', subtitle: 'Nome empresa' }
+                ,{ title: 'Trips', subtitle: 'Nome empresa'  },{ title: 'Trips', subtitle: 'Nome empresa'  },{ title: 'Trips', subtitle: 'Nome empresa'  },{ title: 'Trips', subtitle: 'Nome empresa'  },{ title: 'Trips', subtitle: 'Nome empresa'  },{ title: 'Trips', subtitle: 'Nome empresa'},{ title: 'Trips', subtitle: 'Nome empresa' }
+                ,{ title: 'Trips', subtitle: 'Nome empresa'  },{ title: 'Trips', subtitle: 'Nome empresa'  },{ title: 'Trips', subtitle: 'Nome empresa'  },{ title: 'Trips', subtitle: 'Nome empresa'  },{ title: 'Trips', subtitle: 'Nome empresa'  },{ title: 'Trips', subtitle: 'Nome empresa'  },{ title: 'Trips', subtitle: 'Nome empresa'}
+                ,{ title: 'Trips', subtitle: 'Nome empresa'  },{ title: 'Trips', subtitle: 'Nome empresa'  },{ title: 'Trips', subtitle: 'Nome empresa'  },{ title: 'Trips', subtitle: 'Nome empresa'  },{ title: 'Trips', subtitle: 'Nome empresa'  },{ title: 'Trips', subtitle: 'Nome empresa'  },{ title: 'Trips', subtitle: 'Nome empresa'  }]
     return (
       <ScrollView>
-      <View style={ styles.searchBar }>
-        <InputSearch placeholder={'Pesquise um cliente...'}/>
-      </View>
       <View style={styles.container}>
       <Text style={ styles.title }>Clientes</Text>
       <List>
@@ -31,6 +28,7 @@ export default class ListClientPage extends React.Component {
             <ListItem
               key={i}
               title={item.title}
+              subtitle={item.subtitle}
             />
             </TouchableOpacity>
           ))
@@ -45,14 +43,17 @@ export default class ListClientPage extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    backgroundColor: 'white',
+
   },
   searchBar:{
-    alignItems: 'center'
+    marginTop: 10,
+
   },
   title:{
     fontSize: 25,
     textAlign: 'center',
-    marginTop: 10,
-    marginBottom: -10
+    marginTop: 20,
+    
   }
 });

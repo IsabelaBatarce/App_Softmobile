@@ -27,7 +27,8 @@ const styles = StyleSheet.create({
   label:{
     fontSize: 15,
     marginTop: 10,
-    marginBottom: 10
+    marginBottom: 10,
+    color: '#2d3436'
   },
   input:{
     marginTop: 1,
@@ -41,7 +42,8 @@ const styles = StyleSheet.create({
     height: 140
   },
   campoValor:{
-    fontSize: 20
+    fontSize: 16,
+    color: '#2d3436'
   }
 });
 export default InputArea;

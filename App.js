@@ -34,10 +34,26 @@ class LogoTitle extends React.Component {
 
 
 
+
 const RootStack = createStackNavigator({
+     'ClientDetailsPage': {
+      screen: ClientDetailsPage
+    },
+  
+    
+    'ListClientPage':{
+      screen: ListClientPage
+    },
+
+
     'ListSalesPage':{
       screen: ListSalesPage
     },
+
+     'ClientFilterPage':{
+      screen: ClientFilterPage
+    },
+
 
     'Login': {
         screen: PrimaryLogin,
@@ -69,22 +85,11 @@ const RootStack = createStackNavigator({
       screen: CategoryItensPage
     },
 
-    'ClientFilterPage':{
-      screen: ClientFilterPage
-    },
-
-    'ListClientPage':{
-      screen: ListClientPage
-    },
-
-    'ClientDetailsPage': {
-      screen: ClientDetailsPage
-    },
-
+   
     'ListProdutsPage':{
       screen: ListProdutsPage
     },
-
+   
     'ProductDetailsPage': {
       screen: ProductDetailsPage
     }

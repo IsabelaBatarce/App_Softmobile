@@ -20,19 +20,17 @@ const InputSearch = ({ placeholder, onChanSerach }) => {
 
 const styles = StyleSheet.create({
   searchBar:{
-    backgroundColor: 'white',
-    height: 60,
-    elevation: 3.5,
-    marginTop: 10,
-    width: 390,
-    alignItems: 'center',
+    backgroundColor: '#f7f7f7',
+    height: 50,
+    elevation: 3,
     borderRadius: 5
   },
 
   inputSearch:{
-    height: 58,
-    width: 380,
-    fontSize: 20
+    marginTop: 15,
+    marginBottom: 15,
+    marginLeft: 20,
+    fontSize: 16
   }
 });
 

@@ -39,7 +39,7 @@ constructor(props){
       <Modal
         style={ styles.modal }
         backdrop={ true }
-        position={"bottom"}
+        position={"top"}
         ref={'modal'}
       >
       <List style={{marginTop: 0}}>
