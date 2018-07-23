@@ -5,17 +5,42 @@ import {
   Text,
   StyleSheet,
   ScrollView,
-  TextInput
+  TextInput,
+  TouchableOpacity
 } from 'react-native';
-import {Card} from 'react-native-elements';
+import {Card, Icon} from 'react-native-elements';
 import InputArea from '../components/InputArea';
 import FormDetails from '../components/FormDetails';
+import { Avatar } from 'react-native-material-ui';
+import ListClientPage from './ListClientPage';
 
 export default class ClientDetailsPage extends Component {
-  render() {
+    
+    static navigationOptions = ({ navigation }) => {
+    return {
+      headerRight: (
+        
+         <TouchableOpacity
+         style={{marginRight: 20}}  >
+         <Icon name='more-vert' color='white' />
+         </TouchableOpacity>
+         
+      ),
+      headerLeft:(
+       <TouchableOpacity
+         style={{marginLeft: 20}}
+         >
+         <Icon name='arrow-back' color='white' />
+         </TouchableOpacity>
+      )
+    }
+  };
+
+    render() {
     return (
       <ScrollView>
       <Card>
+        
         <Text style={ styles.title }>Detalhes do Cliente</Text>
       <View style={styles.container}>
           <View style={styles.container1}>
@@ -38,7 +63,7 @@ export default class ClientDetailsPage extends Component {
               <FormDetails NomeCampo={'Cidade'} ValorCampo={' Dourados'}/>
               <FormDetails NomeCampo={'Uf'} ValorCampo={' MS'}/>
             </View>
-            <View style={styles.container1}>
+            <View style={styles.container2}>
               <FormDetails NomeCampo={'Bairro'} ValorCampo={' Vila Major Capins Lins'}/>
               <FormDetails NomeCampo={'Complemento'} ValorCampo={' Casa de apartamento fechado'}/>
             </View>
@@ -46,7 +71,7 @@ export default class ClientDetailsPage extends Component {
               <FormDetails NomeCampo={'CPF'} ValorCampo={' 688.535.435-44'}/>
               <FormDetails NomeCampo={'RG'} ValorCampo={' 34.542.645-2'}/>
             </View>
-            <View style={styles.container1}>
+            <View style={styles.container2}>
               <FormDetails NomeCampo={'Telefone'} ValorCampo={' (67) 94323-3465'}/>
               <FormDetails NomeCampo={'Contato'} ValorCampo={' Jpaquin.runs@gmail.com'}/>
             </View>

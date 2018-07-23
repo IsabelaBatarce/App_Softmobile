@@ -23,7 +23,8 @@ const styles = StyleSheet.create({
   label:{
     fontSize: 15,
     marginTop: 10,
-    marginBottom: 10
+    marginBottom: 10,
+
   },
   input:{
     fontSize: 16,
@@ -36,7 +37,8 @@ const styles = StyleSheet.create({
     elevation: 1,
     backgroundColor: '#fcfcfc',
     height: 40,
-    color: '#2d3436'
+    color: '#2d3436',
+    textAlign: 'justify'
   }
 });
 export default FormDetails;

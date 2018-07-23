@@ -2,9 +2,10 @@ import { createStackNavigator } from 'react-navigation';
 import React from 'react';
 import { Image, View, TouchableOpacity, Text } from 'react-native';
 
-
+import SearchBar from './src/components/SearchBar';
 import MenuPage from './src/pages/MenuPage';
 import CategoryItensPage from './src/pages/CategoryItensPage';
+import AddClientPage from './src/pages/AddClientPage';
 import PrimaryLogin from './src/pages/PrimaryLogin';
 import SecondaryLogin from './src/pages/SecondaryLogin';
 import ClientFilterPage from './src/pages/ClientFilterPage';
@@ -13,6 +14,7 @@ import ListClientPage from './src/pages/ListClientPage';
 import ListSalesPage from './src/pages/ListSalesPage';
 import ProductDetailsPage from './src/pages/ProductDetailsPage';
 import ClientDetailsPage from './src/pages/ClientDetailsPage';
+import { Toolbar } from 'react-native-material-ui';
 
 
 class LogoTitle extends React.Component {
@@ -32,23 +34,30 @@ class LogoTitle extends React.Component {
   }
 };
 
-
-
-
 const RootStack = createStackNavigator({
-     'ClientDetailsPage': {
+ 
+ 'AddClientPage':{
+    screen: AddClientPage,
+   },
+
+ 'ListClientPage':{
+      screen: ListClientPage,
+   },
+
+   
+ 'ClientDetailsPage': {
       screen: ClientDetailsPage
     },
   
-    
-    'ListClientPage':{
-      screen: ListClientPage
-    },
-
-
-    'ListSalesPage':{
+  
+   
+  'ListSalesPage':{
       screen: ListSalesPage
     },
+
+  
+
+
 
      'ClientFilterPage':{
       screen: ClientFilterPage
