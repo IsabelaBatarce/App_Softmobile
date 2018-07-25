@@ -3,13 +3,17 @@ import React from 'react';
 import { Image, View, TouchableOpacity, Text } from 'react-native';
 
 import SearchBar from './src/components/SearchBar';
+import ListSyncSalesPage from './src/pages/ListSyncSalesPage';
+import AddProductPage from './src/pages/AddProductPage';
+import ListItemCategoryPage from './src/pages/ListItemCategoryPage';
+import ItemCategoryPage from './src/pages/ItemCategoryPage';
+import ListDidntSyncSalesPage from './src/pages/ListDidntSyncSalesPage';
 import MenuPage from './src/pages/MenuPage';
 import CategoryItensPage from './src/pages/CategoryItensPage';
 import AddClientPage from './src/pages/AddClientPage';
 import PrimaryLogin from './src/pages/PrimaryLogin';
 import SecondaryLogin from './src/pages/SecondaryLogin';
 import ClientFilterPage from './src/pages/ClientFilterPage';
-import ListProdutsPage from './src/pages/ListProdutsPage';
 import ListClientPage from './src/pages/ListClientPage';
 import ListSalesPage from './src/pages/ListSalesPage';
 import ProductDetailsPage from './src/pages/ProductDetailsPage';
@@ -35,7 +39,29 @@ class LogoTitle extends React.Component {
 };
 
 const RootStack = createStackNavigator({
+  'AddProductPage':{
+      screen:AddProductPage
+  },
+  'ItemCategoryPage':{
+    screen:ItemCategoryPage
+  },
+  'ListItemCategoryPage':{
+    screen:ListItemCategoryPage
+  },
+  
+  'ListDidntSyncSalesPage':{
+    screen:ListDidntSyncSalesPage
+ },
  
+ 'ListSyncSalesPage':{
+    screen:ListSyncSalesPage
+ },
+
+
+ 'ListSalesPage':{
+      screen: ListSalesPage
+    },
+
  'AddClientPage':{
     screen: AddClientPage,
    },
@@ -49,17 +75,7 @@ const RootStack = createStackNavigator({
       screen: ClientDetailsPage
     },
   
-  
-   
-  'ListSalesPage':{
-      screen: ListSalesPage
-    },
-
-  
-
-
-
-     'ClientFilterPage':{
+  'ClientFilterPage':{
       screen: ClientFilterPage
     },
 
@@ -92,11 +108,6 @@ const RootStack = createStackNavigator({
 
     'CategoryItensPage': {
       screen: CategoryItensPage
-    },
-
-   
-    'ListProdutsPage':{
-      screen: ListProdutsPage
     },
    
     'ProductDetailsPage': {

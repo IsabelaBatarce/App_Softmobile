@@ -1,3 +1,4 @@
+
 import React, { Component } from 'react';
 import {
   View,
@@ -9,10 +10,9 @@ import {
 import { List, ListItem, Icon } from 'react-native-elements';
 
 
-import InputSearch from '../components/InputSearch';
 import ModalList from '../components/ModalList';
 
-export default class ListSalesPage extends React.Component {
+export default class ListItemCategoryPage extends React.Component {
   constructor(props){
     super(props);
     this._onPressAdd = this._onPressAdd.bind(this);
@@ -23,12 +23,12 @@ export default class ListSalesPage extends React.Component {
       headerRight: (
         <View style={styles.header}>
           <TouchableOpacity 
-          onPress={ navigation.getParam('_OnPressAdd') } 
-          style={{marginRight: 20}}>
+           style={{marginRight: 20}}>
           <Icon name='search' color='white' />
           </TouchableOpacity>
           
           <TouchableOpacity
+            onPress={ navigation.getParam('_OnPressAdd') } 
            style={{marginRight: 20}}>
            <Icon name='more-vert' color='white' />
           </TouchableOpacity>
@@ -65,12 +65,14 @@ export default class ListSalesPage extends React.Component {
         
         <View style={styles.container}>
 
-        <Text style={ styles.title }>Vendas</Text>
+        <Text style={ styles.title }>Vendas Sincronizadas</Text>
 
         <List>
           {
             list.map((item, i) => (
-              <TouchableOpacity>
+              <TouchableOpacity
+              onPress={ () => this.props.navigation.navigate('ItemCategoryPage') }
+              >
               <ListItem
                 key={i}
                 title={item.title}
@@ -95,7 +97,7 @@ const styles = StyleSheet.create({
   },
 
   title:{
-    fontSize: 25,
+    fontSize: 20,
     textAlign: 'center',
     marginTop: 20,
     

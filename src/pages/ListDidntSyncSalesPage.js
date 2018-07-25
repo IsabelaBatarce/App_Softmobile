@@ -9,10 +9,9 @@ import {
 import { List, ListItem, Icon } from 'react-native-elements';
 
 
-import InputSearch from '../components/InputSearch';
 import ModalList from '../components/ModalList';
 
-export default class ListSalesPage extends React.Component {
+export default class ListDidntSyncSalesPage extends React.Component {
   constructor(props){
     super(props);
     this._onPressAdd = this._onPressAdd.bind(this);
@@ -65,7 +64,7 @@ export default class ListSalesPage extends React.Component {
         
         <View style={styles.container}>
 
-        <Text style={ styles.title }>Vendas</Text>
+        <Text style={ styles.title }>Vendas não Sincronizadas</Text>
 
         <List>
           {
@@ -95,7 +94,7 @@ const styles = StyleSheet.create({
   },
 
   title:{
-    fontSize: 25,
+    fontSize: 20,
     textAlign: 'center',
     marginTop: 20,
     

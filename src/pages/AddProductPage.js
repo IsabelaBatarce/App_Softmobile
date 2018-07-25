@@ -14,7 +14,7 @@ import {Card, Icon} from 'react-native-elements';
 import Form from '../components/Form';
 import ButtonI from '../components/ButtonI';
 
-export default class AddClientPage extends React.Component {
+export default class AddProductPage extends React.Component {
 
   static navigationOptions = ({ navigation }) => {
     return {
@@ -36,81 +36,44 @@ export default class AddClientPage extends React.Component {
           
           <Card>
             
-            <Text style={ styles.title }>Cadastro Cliente</Text>
+            <Text style={ styles.title }>Cadastro Produto</Text>
         
         <Form >
             
              <TextInput 
                 style={styles.texto}
-                placeholder= "Digite o nome fantasma"
+                placeholder= "Digite a marca"
                 inlineImageLeft='search_icon'
                                
                 />
 
             <TextInput 
                 style={styles.texto}
-                placeholder= "Digite o endereço"
+                placeholder= "Digite a unidade"
                                 
                 />
 
                <TextInput 
                 style={styles.texto}
-                placeholder= "Observação"
+                placeholder= "Digite a sub-unidade"
                                
                 />
                <TextInput 
                 style={styles.texto}
-                placeholder= "Digite a cidade"
+                placeholder= "Digite a quantidade"
                                 
                 />
                <TextInput 
                 style={styles.texto}
-                placeholder= "Digite o uf"
+                placeholder= "Digite o preço"
                                 
-                />
-
-               <TextInput 
-                style={styles.texto}
-                placeholder= "Digite o bairro"
-                                
-                />
-
-               <TextInput 
-                style={styles.texto}
-                placeholder= "Digite o complemento"
-                                   
-                />
-
-               <TextInput 
-                style={styles.texto}
-                placeholder= "Digite o cpf"
-                                
-                />
-
-               <TextInput 
-                style={styles.texto}
-                placeholder= "Digite o rg"
-                              
-                />
-
-               <TextInput 
-                style={styles.texto}
-                placeholder= "Digite o telefone"
-                              
-                />
-
-               <TextInput 
-                style={styles.texto}
-                placeholder= "Digite o contato"
-                        
-                />
-            
+                />            
           
         </Form>
 	       
          <View  style = {styles.button} >
         
-            <ButtonI onPressButton={ () => this.props.navigation.navigate('ListClientPage') } />
+            <ButtonI onPressButton={ () => this.props.navigation.navigate('ListSalesPage') } />
         
         </View>
          
