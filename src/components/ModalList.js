@@ -25,11 +25,9 @@ constructor(props){
   render() {
 
     const list = [
+     
       {
-        item: 'Pesquisar',
-      },
-      {
-        item: 'Adicionar',
+        item: 'Excluir',
       },
       {
         item: 'Editar',

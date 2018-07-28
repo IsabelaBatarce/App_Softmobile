@@ -5,18 +5,18 @@ import {
   Text,
   StyleSheet,
   ScrollView,
-  TouchableOpacity
+  TouchableOpacity,
+  Alert
 } from 'react-native';
 import { List, ListItem, Icon } from 'react-native-elements';
+import ActionButton from 'react-native-action-button';
+
 
 
 import ModalList from '../components/ModalList';
 
 export default class ListItemCategoryPage extends React.Component {
-  constructor(props){
-    super(props);
-    this._onPressAdd = this._onPressAdd.bind(this);
-  }
+  
 
   static navigationOptions = ({ navigation }) => {
     return {
@@ -27,11 +27,7 @@ export default class ListItemCategoryPage extends React.Component {
           <Icon name='search' color='white' />
           </TouchableOpacity>
           
-          <TouchableOpacity
-            onPress={ navigation.getParam('_OnPressAdd') } 
-           style={{marginRight: 20}}>
-           <Icon name='more-vert' color='white' />
-          </TouchableOpacity>
+         
         </View>
       ),
       headerLeft:(
@@ -43,13 +39,6 @@ export default class ListItemCategoryPage extends React.Component {
     }
   };
 
-  componentWillMount() {
-    this.props.navigation.setParams({ _OnPressAdd: this._onPressAdd });
-  }
-
-  _onPressAdd(){
-    this.refs.ModalList.showAddModal();
-  }
 
   render() {
     
@@ -59,13 +48,12 @@ export default class ListItemCategoryPage extends React.Component {
                 ,{ title: 'Trips', subtitle: 'Nome empresa'  },{ title: 'Trips', subtitle: 'Nome empresa'  },{ title: 'Trips', subtitle: 'Nome empresa'  },{ title: 'Trips', subtitle: 'Nome empresa'  },{ title: 'Trips', subtitle: 'Nome empresa'  },{ title: 'Trips', subtitle: 'Nome empresa'  },{ title: 'Trips', subtitle: 'Nome empresa'  }]
    return (
       <View>
-        <ModalList style={ styles.modal } ref={'ModalList'}></ModalList>
         <ScrollView>
 
         
         <View style={styles.container}>
 
-        <Text style={ styles.title }>Vendas Sincronizadas</Text>
+        <Text style={ styles.title }>Produtos</Text>
 
         <List>
           {
@@ -84,6 +72,16 @@ export default class ListItemCategoryPage extends React.Component {
         </List>
         </View>
         </ScrollView>
+      <ActionButton buttonColor="rgba(231,76,60,1)">
+          <ActionButton.Item size={46} buttonColor='#009688' title="Adicionar" onPress={() => this.props.navigation.navigate('AddProductPage')}>
+            <Icon name="library-add" color="white" style={styles.actionButtonIcon} />
+          </ActionButton.Item>
+          <ActionButton.Item size={46}buttonColor='#303f9f' title="Sync" onPress={() => {
+    Alert.alert('Deseja excluir um produto?')
+  }}>
+            <Icon name="delete" color="white" style={styles.actionButtonIcon} />
+          </ActionButton.Item>
+        </ActionButton>
       </View>
     );
   }

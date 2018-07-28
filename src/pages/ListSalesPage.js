@@ -4,34 +4,29 @@ import {
   Text,
   StyleSheet,
   ScrollView,
-  TouchableOpacity
+  TouchableOpacity,
+  Alert
 } from 'react-native';
 import { List, ListItem, Icon } from 'react-native-elements';
+import ActionButton from 'react-native-action-button';
 
 
 import InputSearch from '../components/InputSearch';
 import ModalList from '../components/ModalList';
 
 export default class ListSalesPage extends React.Component {
-  constructor(props){
-    super(props);
-    this._onPressAdd = this._onPressAdd.bind(this);
-  }
-
+ 
   static navigationOptions = ({ navigation }) => {
     return {
       headerRight: (
         <View style={styles.header}>
           <TouchableOpacity 
-          onPress={ navigation.getParam('_OnPressAdd') } 
+ 
           style={{marginRight: 20}}>
           <Icon name='search' color='white' />
           </TouchableOpacity>
           
-          <TouchableOpacity
-           style={{marginRight: 20}}>
-           <Icon name='more-vert' color='white' />
-          </TouchableOpacity>
+         
         </View>
       ),
       headerLeft:(
@@ -43,14 +38,7 @@ export default class ListSalesPage extends React.Component {
     }
   };
 
-  componentWillMount() {
-    this.props.navigation.setParams({ _OnPressAdd: this._onPressAdd });
-  }
-
-  _onPressAdd(){
-    this.refs.ModalList.showAddModal();
-  }
-
+  
   render() {
     
     const list = [{ title: 'Trips', subtitle: 'Nome empresa' },{ title: 'Trips', subtitle: 'Nome empresa'  },{ title: 'Trips', subtitle: 'Nome empresa'},{ title: 'Trips', subtitle: 'Nome empresa'},{ title: 'Trips', subtitle: 'Nome empresa'  },{ title: 'Trips', subtitle: 'Nome empresa' }
@@ -59,7 +47,6 @@ export default class ListSalesPage extends React.Component {
                 ,{ title: 'Trips', subtitle: 'Nome empresa'  },{ title: 'Trips', subtitle: 'Nome empresa'  },{ title: 'Trips', subtitle: 'Nome empresa'  },{ title: 'Trips', subtitle: 'Nome empresa'  },{ title: 'Trips', subtitle: 'Nome empresa'  },{ title: 'Trips', subtitle: 'Nome empresa'  },{ title: 'Trips', subtitle: 'Nome empresa'  }]
    return (
       <View>
-        <ModalList style={ styles.modal } ref={'ModalList'}></ModalList>
         <ScrollView>
 
         
@@ -70,7 +57,8 @@ export default class ListSalesPage extends React.Component {
         <List>
           {
             list.map((item, i) => (
-              <TouchableOpacity>
+             <TouchableOpacity onPress={ () => this.props.navigation.navigate('ItemCategoryPage') }>
+
               <ListItem
                 key={i}
                 title={item.title}
@@ -82,6 +70,18 @@ export default class ListSalesPage extends React.Component {
         </List>
         </View>
         </ScrollView>
+      <ActionButton buttonColor="rgba(231,76,60,1)">
+          <ActionButton.Item size={46} buttonColor='#009688' title="Editar" onPress={() => {
+    Alert.alert('Deseja editar esta venda?')
+  }}>
+            <Icon name="edit" color="white" style={styles.actionButtonIcon} />
+          </ActionButton.Item>
+          <ActionButton.Item size={46}buttonColor='#303f9f' title="Sync" onPress={() => {
+    Alert.alert('Deseja realizar a sincronização?')
+  }}>
+            <Icon name="sync" color="white" style={styles.actionButtonIcon} />
+          </ActionButton.Item>
+        </ActionButton>
       </View>
     );
   }
@@ -100,10 +100,7 @@ const styles = StyleSheet.create({
     marginTop: 20,
     
   },
-  header:{
-    flex: 1,
-    flexDirection: 'row'
-  },
+
   
   modal:{
     flex: 1

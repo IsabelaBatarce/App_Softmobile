@@ -82,6 +82,7 @@ export default class ListSyncSalesPage extends React.Component {
         </List>
         </View>
         </ScrollView>
+    
       </View>
     );
   }

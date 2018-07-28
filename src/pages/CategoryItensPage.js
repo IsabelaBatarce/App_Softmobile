@@ -10,9 +10,7 @@ export default class CategoryItensPage extends React.Component {
     return (
       <ScrollView>
       <View style={styles.container}>
-        <InputSearch
-          placeholder={'Pesquise uma categoria...'}
-        />
+        
         <View style={styles.listCategory}>
           <ButtonItemCategory nameCategory={'Ferramentas'}/>
           <ButtonItemCategory nameCategory={'Caixas'}/>

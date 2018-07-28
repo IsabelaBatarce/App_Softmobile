@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, TextInput,Text, Button,  Alert, StyleSheet, Image } from 'react-native';
+import { View, TextInput,Text, Button,  Alert, StyleSheet, Image, TouchableOpacity } from 'react-native';
 import RNPickerSelect from 'react-native-picker-select';
 
 export default class PrimaryLoginPage extends React.Component {    
@@ -33,12 +33,12 @@ export default class PrimaryLoginPage extends React.Component {
       
       <View >
       
-
         <RNPickerSelect
             
             placeholder={{
                 label: 'Selecione o vendedor',
                 value: null,
+                icon: 'menu'
             }}
             items={this.state.items}
             onValueChange={(value) => {
@@ -52,7 +52,6 @@ export default class PrimaryLoginPage extends React.Component {
             onDownArrow={() => {
                 this.inputRefs.company.focus();
             }}
-
             style={{ ...pickerSelectStyles }}
 
             
@@ -62,7 +61,7 @@ export default class PrimaryLoginPage extends React.Component {
             }}
         />
               
-        
+      
 
  </View>
         );

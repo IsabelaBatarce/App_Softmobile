@@ -4,6 +4,7 @@ import { Image, View, TouchableOpacity, Text } from 'react-native';
 
 import SearchBar from './src/components/SearchBar';
 import ListSyncSalesPage from './src/pages/ListSyncSalesPage';
+import test from './src/pages/test';
 import AddProductPage from './src/pages/AddProductPage';
 import ListItemCategoryPage from './src/pages/ListItemCategoryPage';
 import ItemCategoryPage from './src/pages/ItemCategoryPage';
@@ -39,48 +40,7 @@ class LogoTitle extends React.Component {
 };
 
 const RootStack = createStackNavigator({
-  'AddProductPage':{
-      screen:AddProductPage
-  },
-  'ItemCategoryPage':{
-    screen:ItemCategoryPage
-  },
-  'ListItemCategoryPage':{
-    screen:ListItemCategoryPage
-  },
-  
-  'ListDidntSyncSalesPage':{
-    screen:ListDidntSyncSalesPage
- },
- 
- 'ListSyncSalesPage':{
-    screen:ListSyncSalesPage
- },
-
-
- 'ListSalesPage':{
-      screen: ListSalesPage
-    },
-
- 'AddClientPage':{
-    screen: AddClientPage,
-   },
-
- 'ListClientPage':{
-      screen: ListClientPage,
-   },
-
-   
- 'ClientDetailsPage': {
-      screen: ClientDetailsPage
-    },
-  
-  'ClientFilterPage':{
-      screen: ClientFilterPage
-    },
-
-
-    'Login': {
+   'Login': {
         screen: PrimaryLogin,
         navigationOptions:{
           headerTitle: <LogoTitle />,
@@ -90,8 +50,48 @@ const RootStack = createStackNavigator({
             }
         }
       },
+  'ItemCategoryPage':{
+    screen:ItemCategoryPage
+  },
+ 'ListItemCategoryPage':{
+    screen:ListItemCategoryPage
+  },
+ 'ListSalesPage':{
+      screen: ListSalesPage
+    },
+'ListDidntSyncSalesPage':{
+    screen:ListDidntSyncSalesPage
+ },
+'ClientFilterPage':{
+      screen: ClientFilterPage
+    },
+'ListClientPage':{
+      screen: ListClientPage,
+   },
 
-    'SecondaryLogin':{
+'test':{
+  screen:test
+} , 
+ 
+
+  'AddProductPage':{
+      screen:AddProductPage
+  },
+
+   
+ 'ListSyncSalesPage':{
+    screen:ListSyncSalesPage
+ },
+
+  'AddClientPage':{
+    screen: AddClientPage,
+   },
+   
+ 'ClientDetailsPage': {
+      screen: ClientDetailsPage
+    },
+  
+   'SecondaryLogin':{
       screen: SecondaryLogin,
       navigationOptions:{
         headerTitle: <LogoTitle />,
