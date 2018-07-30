@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleSheet, Text, View, TextInput,Image, TouchableOpacity,ScrollView} from 'react-native';
-import Picker from '../components/Picker';
+import Picker from '../../components/Picker';
 import { Card, Icon } from 'react-native-elements';
 import ActionButton from 'react-native-action-button';
 
@@ -35,7 +35,7 @@ export default class ClientFilterPage extends React.Component {
       <Card containerStyle = {styles.container} >
   		
   		<Image
-        source={require('../images/clientfilter.png')}
+        source={require('../../images/clientfilter.png')}
         style={styles.image}
       	/>
   		

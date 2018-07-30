@@ -11,7 +11,7 @@ import {
 import Modal from 'react-native-modalbox';
 import { List, ListItem } from 'react-native-elements'
 
-import ListSalesPage from '../pages/ListSalesPage';
+import ListSalesPage from '../pages/SalesPages/ListSalesPage';
 
 
 export default class ModalList extends Component {

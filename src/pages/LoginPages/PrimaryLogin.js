@@ -1,9 +1,9 @@
 import React from 'react';
 import { StyleSheet, Text, View, TextInput,Image, TouchableOpacity } from 'react-native';
 
-import Form from '../components/Form';
-import Picker from '../components/Picker';
-import ButtonI from '../components/ButtonI';
+import Form from '../../components/Form';
+import Picker from '../../components/Picker';
+import ButtonI from '../../components/ButtonI';
 
 
 

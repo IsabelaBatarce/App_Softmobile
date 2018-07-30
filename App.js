@@ -3,22 +3,21 @@ import React from 'react';
 import { Image, View, TouchableOpacity, Text } from 'react-native';
 
 import SearchBar from './src/components/SearchBar';
-import ListSyncSalesPage from './src/pages/ListSyncSalesPage';
+import ListSyncSalesPage from './src/pages/SalesPages/ListSyncSalesPage';
 import test from './src/pages/test';
-import AddProductPage from './src/pages/AddProductPage';
-import ListItemCategoryPage from './src/pages/ListItemCategoryPage';
+import ListProductsPage from './src/pages/ProductsPages/ListProductsPage';
 import ItemCategoryPage from './src/pages/ItemCategoryPage';
-import ListDidntSyncSalesPage from './src/pages/ListDidntSyncSalesPage';
+import ListDidntSyncSalesPage from './src/pages/SalesPages/ListDidntSyncSalesPage';
 import MenuPage from './src/pages/MenuPage';
 import CategoryItensPage from './src/pages/CategoryItensPage';
-import AddClientPage from './src/pages/AddClientPage';
-import PrimaryLogin from './src/pages/PrimaryLogin';
-import SecondaryLogin from './src/pages/SecondaryLogin';
-import ClientFilterPage from './src/pages/ClientFilterPage';
-import ListClientPage from './src/pages/ListClientPage';
-import ListSalesPage from './src/pages/ListSalesPage';
-import ProductDetailsPage from './src/pages/ProductDetailsPage';
-import ClientDetailsPage from './src/pages/ClientDetailsPage';
+import AddClientPage from './src/pages/ClientsPages/AddClientPage';
+import PrimaryLogin from './src/pages/LoginPages/PrimaryLogin';
+import SecondaryLogin from './src/pages/LoginPages/SecondaryLogin';
+import ClientFilterPage from './src/pages/ClientsPages/ClientFilterPage';
+import ListClientPage from './src/pages/ClientsPages/ListClientPage';
+import ListSalesPage from './src/pages/SalesPages/ListSalesPage';
+import ProductDetailsPage from './src/pages/ProductsPages/ProductDetailsPage';
+import ClientDetailsPage from './src/pages/ClientsPages/ClientDetailsPage';
 import { Toolbar } from 'react-native-material-ui';
 
 
@@ -40,6 +39,25 @@ class LogoTitle extends React.Component {
 };
 
 const RootStack = createStackNavigator({
+ 'ListClientPage':{
+      screen: ListClientPage,
+   },
+ 'SecondaryLogin': {
+        screen: SecondaryLogin,
+        navigationOptions:{
+          headerTitle: <LogoTitle />,
+        headerStyle: {
+            backgroundColor: '#e24d4d',
+            height: 250
+            }
+        }
+      },
+ 'ListProductsPage':{
+    screen:ListProductsPage
+  },
+ 'ProductDetailsPage':{
+    screen: ProductDetailsPage
+ },
    'Login': {
         screen: PrimaryLogin,
         navigationOptions:{
@@ -50,12 +68,14 @@ const RootStack = createStackNavigator({
             }
         }
       },
+ 
+
+ 
+
   'ItemCategoryPage':{
     screen:ItemCategoryPage
   },
- 'ListItemCategoryPage':{
-    screen:ListItemCategoryPage
-  },
+ 
  'ListSalesPage':{
       screen: ListSalesPage
     },
@@ -65,19 +85,11 @@ const RootStack = createStackNavigator({
 'ClientFilterPage':{
       screen: ClientFilterPage
     },
-'ListClientPage':{
-      screen: ListClientPage,
-   },
+
 
 'test':{
   screen:test
 } , 
- 
-
-  'AddProductPage':{
-      screen:AddProductPage
-  },
-
    
  'ListSyncSalesPage':{
     screen:ListSyncSalesPage
@@ -91,17 +103,7 @@ const RootStack = createStackNavigator({
       screen: ClientDetailsPage
     },
   
-   'SecondaryLogin':{
-      screen: SecondaryLogin,
-      navigationOptions:{
-        headerTitle: <LogoTitle />,
-      headerStyle: {
-          backgroundColor: '#e24d4d',
-          height: 250
-          }
-      }
-    },
-
+   
     'MenuPage': {
       screen: MenuPage
     },
@@ -110,9 +112,7 @@ const RootStack = createStackNavigator({
       screen: CategoryItensPage
     },
    
-    'ProductDetailsPage': {
-      screen: ProductDetailsPage
-    }
+    
 
   },{
 
@@ -120,7 +120,7 @@ const RootStack = createStackNavigator({
        title: "SoftMobile",
        headerTintColor: '#f5f6fa',
        headerStyle: {
-            backgroundColor: '#e24d4d',
+            backgroundColor: '#bf360c',
        },
 
        headerTitleStyle: {

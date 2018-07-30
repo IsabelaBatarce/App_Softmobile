@@ -13,7 +13,7 @@ import {Card, Icon} from 'react-native-elements';
 import InputArea from '../components/InputArea';
 import FormDetails from '../components/FormDetails';
 import { Avatar } from 'react-native-material-ui';
-import ListClientPage from './ListClientPage';
+import ListClientPage from './ClientsPages/ListClientPage';
 import ModalList from '../components/ModalList';
 
 export default class ItemCategoryPage extends Component {

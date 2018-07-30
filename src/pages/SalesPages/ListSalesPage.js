@@ -1,4 +1,3 @@
-
 import React, { Component } from 'react';
 import {
   View,
@@ -12,18 +11,15 @@ import { List, ListItem, Icon } from 'react-native-elements';
 import ActionButton from 'react-native-action-button';
 
 
-
-import ModalList from '../components/ModalList';
-
-export default class ListItemCategoryPage extends React.Component {
-  
-
+export default class ListSalesPage extends React.Component {
+ 
   static navigationOptions = ({ navigation }) => {
     return {
       headerRight: (
         <View style={styles.header}>
           <TouchableOpacity 
-           style={{marginRight: 20}}>
+ 
+          style={{marginRight: 20}}>
           <Icon name='search' color='white' />
           </TouchableOpacity>
           
@@ -39,7 +35,7 @@ export default class ListItemCategoryPage extends React.Component {
     }
   };
 
-
+  
   render() {
     
     const list = [{ title: 'Trips', subtitle: 'Nome empresa' },{ title: 'Trips', subtitle: 'Nome empresa'  },{ title: 'Trips', subtitle: 'Nome empresa'},{ title: 'Trips', subtitle: 'Nome empresa'},{ title: 'Trips', subtitle: 'Nome empresa'  },{ title: 'Trips', subtitle: 'Nome empresa' }
@@ -53,14 +49,13 @@ export default class ListItemCategoryPage extends React.Component {
         
         <View style={styles.container}>
 
-        <Text style={ styles.title }>Produtos</Text>
+        <Text style={ styles.title }>Vendas</Text>
 
         <List>
           {
             list.map((item, i) => (
-              <TouchableOpacity
-              onPress={ () => this.props.navigation.navigate('ItemCategoryPage') }
-              >
+             <TouchableOpacity onPress={ () => this.props.navigation.navigate('ItemCategoryPage') }>
+
               <ListItem
                 key={i}
                 title={item.title}
@@ -73,13 +68,15 @@ export default class ListItemCategoryPage extends React.Component {
         </View>
         </ScrollView>
       <ActionButton buttonColor="rgba(231,76,60,1)">
-          <ActionButton.Item size={46} buttonColor='#009688' title="Adicionar" onPress={() => this.props.navigation.navigate('AddProductPage')}>
-            <Icon name="library-add" color="white" style={styles.actionButtonIcon} />
+          <ActionButton.Item size={46} buttonColor='#009688' title="Editar" onPress={() => {
+    Alert.alert('Deseja editar esta venda?')
+  }}>
+            <Icon name="edit" color="white" style={styles.actionButtonIcon} />
           </ActionButton.Item>
           <ActionButton.Item size={46}buttonColor='#303f9f' title="Sync" onPress={() => {
-    Alert.alert('Deseja excluir um produto?')
+    Alert.alert('Deseja realizar a sincronização?')
   }}>
-            <Icon name="delete" color="white" style={styles.actionButtonIcon} />
+            <Icon name="sync" color="white" style={styles.actionButtonIcon} />
           </ActionButton.Item>
         </ActionButton>
       </View>
@@ -95,15 +92,12 @@ const styles = StyleSheet.create({
   },
 
   title:{
-    fontSize: 20,
+    fontSize: 25,
     textAlign: 'center',
     marginTop: 20,
     
   },
-  header:{
-    flex: 1,
-    flexDirection: 'row'
-  },
+
   
   modal:{
     flex: 1

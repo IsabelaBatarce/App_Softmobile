@@ -11,8 +11,9 @@ import {
 
 } from 'react-native';
 import {Card, Icon} from 'react-native-elements';
-import Form from '../components/Form';
-import ButtonI from '../components/ButtonI';
+import Form from '../../components/Form';
+import ButtonI from '../../components/ButtonI';
+import { FormLabel, FormInput, FormValidationMessage } from 'react-native-elements'
 
 export default class AddClientPage extends React.Component {
 
@@ -37,77 +38,67 @@ export default class AddClientPage extends React.Component {
           <Card>
             
             <Text style={ styles.title }>Cadastro Cliente</Text>
+        <View>
         
-        <Form >
-            
-             <TextInput 
-                style={styles.texto}
+            <FormLabel>Nome Fantasma</FormLabel>
+             <FormInput 
                 placeholder= "Digite o nome fantasma"
-                inlineImageLeft='search_icon'
+                
                                
                 />
-
-            <TextInput 
-                style={styles.texto}
-                placeholder= "Digite o endereço"
+            <FormLabel>Endereço</FormLabel>
+            <FormInput
+                placeholder= "Digite o Endereço"
                                 
                 />
-
-               <TextInput 
-                style={styles.texto}
-                placeholder= "Observação"
-                               
-                />
-               <TextInput 
-                style={styles.texto}
+               <FormLabel>Cidade</FormLabel>
+               <FormInput
                 placeholder= "Digite a cidade"
                                 
                 />
-               <TextInput 
-                style={styles.texto}
-                placeholder= "Digite o uf"
+               <FormLabel>UF</FormLabel>
+               <FormInput
+                placeholder= "Digite o UF"
                                 
                 />
-
-               <TextInput 
-                style={styles.texto}
-                placeholder= "Digite o bairro"
+               <FormLabel>Bairro</FormLabel>
+               <FormInput
+                placeholder= "Digite o baairro"
                                 
                 />
-
-               <TextInput 
-                style={styles.texto}
+               <FormLabel>Complemento</FormLabel>
+               <FormInput
                 placeholder= "Digite o complemento"
                                    
                 />
-
-               <TextInput 
-                style={styles.texto}
-                placeholder= "Digite o cpf"
+               <FormLabel>CPF/CNPJ</FormLabel>
+               <FormInput
+                placeholder= "Digite o CPF/CNPJ"
                                 
                 />
-
-               <TextInput 
-                style={styles.texto}
-                placeholder= "Digite o rg"
+               <FormLabel>RG</FormLabel>
+               <FormInput
+                placeholder= "Digite o RG"
                               
                 />
-
-               <TextInput 
-                style={styles.texto}
+               <FormLabel>Telefone</FormLabel>
+               <FormInput
                 placeholder= "Digite o telefone"
                               
                 />
-
-               <TextInput 
-                style={styles.texto}
+               <FormLabel>Contato</FormLabel>
+               <FormInput
                 placeholder= "Digite o contato"
                         
                 />
-            
+             <FormLabel>Observação</FormLabel>
+             <FormInput
+                placeholder= "Digite a observação"
+                               
+                />
           
-        </Form>
-	       
+        
+	       </View>
          <View  style = {styles.button} >
         
             <ButtonI onPressButton={ () => this.props.navigation.navigate('ListClientPage') } />
@@ -153,7 +144,8 @@ const styles = StyleSheet.create({
           fontSize: 25,
           textAlign: 'center',
           marginTop: 5,
-          marginBottom:5
+          marginBottom:5,
+          color:'#212121'
     
   }
 

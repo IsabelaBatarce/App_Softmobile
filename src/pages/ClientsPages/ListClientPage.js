@@ -69,10 +69,10 @@ export default class test extends Component {
           <ActionButton.Item size={46} buttonColor='#009688' title="Adicionar" onPress={() => this.props.navigation.navigate('AddClientPage')}>
             <Icon name="person-add" color="white" style={styles.actionButtonIcon} />
           </ActionButton.Item>
-          <ActionButton.Item size={46}buttonColor='#303f9f' title="Sync" onPress={() => {
-    Alert.alert('Deseja realizar a sincronização?')
+          <ActionButton.Item size={46}buttonColor='#303f9f' title="Deletar" onPress={() => {
+    Alert.alert('Deseja deletar algum cliente?')
   }}>
-            <Icon name="sync" color="white" style={styles.actionButtonIcon} />
+            <Icon name="delete" color="white" style={styles.actionButtonIcon} />
           </ActionButton.Item>
         </ActionButton>
       </View>

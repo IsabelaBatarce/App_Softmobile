@@ -9,52 +9,32 @@ import {
   TouchableOpacity
 } from 'react-native';
 import {Card, Icon} from 'react-native-elements';
-import InputArea from '../components/InputArea';
-import FormDetails from '../components/FormDetails';
+import InputArea from '../../components/InputArea';
+import FormDetails from '../../components/FormDetails';
 import { Avatar } from 'react-native-material-ui';
 import ListClientPage from './ListClientPage';
-import ModalList from '../components/ModalList';
+import ModalList from '../../components/ModalList';
 
 
 export default class ClientDetailsPage extends Component {
-    constructor(props){
-    super(props);
-    this._onPressAdd = this._onPressAdd.bind(this);
-  }
-
-  /*static navigationOptions = ({ navigation }) => {
+   
+   static navigationOptions = ({ navigation }) => {
     return {
-      headerRight: (
-        <View style={styles.header}>
-          <TouchableOpacity 
-           style={{marginRight: 20}}>
-          <Icon name='search' color='white' />
-          </TouchableOpacity>
-          
-          <TouchableOpacity
-           onPress={ navigation.getParam('_OnPressAdd') } 
-           style={{marginRight: 20}}>
-           <Icon name='more-vert' color='white' />
-          </TouchableOpacity>
-        </View>
-      ),
+      
       headerLeft:(
        <TouchableOpacity
          style={{marginLeft: 20}}>
          <Icon name='arrow-back' color='white' />
          </TouchableOpacity>
+      ),
+      headerRight:(
+       <TouchableOpacity
+         style={{marginRight: 20}}>
+         <Icon name='more-vert' color='white' />
+         </TouchableOpacity>
       )
     }
-  };*/
-
-  componentWillMount() {
-    this.props.navigation.setParams({ _OnPressAdd: this._onPressAdd });
-  }
-
-  _onPressAdd(){
-    this.refs.ModalList.showAddModal();
-  }
-    
+  };
 
     render() {
     return (
@@ -65,8 +45,24 @@ export default class ClientDetailsPage extends Component {
         <ModalList style={ styles.modal } ref={'ModalList'}></ModalList>
       <View style={styles.container}>
           <View style={styles.container1}>
-            <FormDetails style={styles.nome} NomeCampo={'Nome fantásia'} ValorCampo={' Jpaquin'}/>
+            <FormDetails style={styles.nome} NomeCampo={'Nome Fantasia'} ValorCampo={' Jpaquin'}/>
             <FormDetails style={styles.marca} NomeCampo={'Endereço'} ValorCampo={' Fua Finleto Muller'}/>
+            <FormDetails NomeCampo={'Bairro'} ValorCampo={' Vila Major Capins Lins'}/>
+              <FormDetails NomeCampo={'Complemento'} ValorCampo={' Casa de apartamento fechado'}/>
+          </View>
+           <View style={styles.container2}>
+              <FormDetails NomeCampo={'Cidade'} ValorCampo={' Dourados'}/>
+              <FormDetails NomeCampo={'Uf'} ValorCampo={' MS'}/>
+            </View>
+            
+            <View style={styles.container2}>
+              <FormDetails NomeCampo={'CPF/CNPJ'} ValorCampo={' 688.535.435-44'}/>
+              <FormDetails NomeCampo={'RG'} ValorCampo={' 34.542.645-2'}/>
+            </View>
+            <View style={styles.container2}>
+              <FormDetails NomeCampo={'Telefone'} ValorCampo={' (67) 94323-3465'}/>
+              <FormDetails NomeCampo={'Contato'} ValorCampo={' Jpaquin.runs@gmail.com'}/>
+            </View>
             <InputArea NomeCampo={'Observação'}
             ValorCampoInput=
                   {`Lorem ipsum libero consequat sit euismod ornare augue urna nec ad platea a pharetra risus,
@@ -79,23 +75,6 @@ export default class ClientDetailsPage extends Component {
                   etiam felis cursus accumsan massa varius curae condimentum est, donec dictum etiam proin ante tristique nisl
                   donec turpis aptent.`}
             />
-          </View>
-            <View style={styles.container2}>
-              <FormDetails NomeCampo={'Cidade'} ValorCampo={' Dourados'}/>
-              <FormDetails NomeCampo={'Uf'} ValorCampo={' MS'}/>
-            </View>
-            <View style={styles.container2}>
-              <FormDetails NomeCampo={'Bairro'} ValorCampo={' Vila Major Capins Lins'}/>
-              <FormDetails NomeCampo={'Complemento'} ValorCampo={' Casa de apartamento fechado'}/>
-            </View>
-            <View style={styles.container2}>
-              <FormDetails NomeCampo={'CPF'} ValorCampo={' 688.535.435-44'}/>
-              <FormDetails NomeCampo={'RG'} ValorCampo={' 34.542.645-2'}/>
-            </View>
-            <View style={styles.container2}>
-              <FormDetails NomeCampo={'Telefone'} ValorCampo={' (67) 94323-3465'}/>
-              <FormDetails NomeCampo={'Contato'} ValorCampo={' Jpaquin.runs@gmail.com'}/>
-            </View>
       </View>
       </Card>
       </ScrollView>
@@ -109,7 +88,7 @@ const styles = StyleSheet.create({
     fontSize: 20,
     marginTop: 5,
     marginBottom: 5,
-    color: '#2d3436'
+    color: '#212121'
   },
   container: {
     borderRadius: 3,
@@ -121,6 +100,7 @@ const styles = StyleSheet.create({
     marginTop: 10,
     marginBottom: 10,
     flex: 1,
+    width: 293
     
   },
     header:{
@@ -128,7 +108,6 @@ const styles = StyleSheet.create({
     flexDirection: 'row'
   },
   container2: {
-    marginTop: 10,
     marginBottom: 10,
     flexDirection: 'row',
     
