@@ -83,19 +83,16 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
 
   },
-
   title:{
-    fontSize: 20,
-    textAlign: 'center',
-    marginTop: 20,
-    
+    fontSize: 25,
+    marginTop: 10,
+    color: '#212121',
+    alignSelf: 'center'
   },
   header:{
     flex: 1,
     flexDirection: 'row'
   },
   
-  modal:{
-    flex: 1
-  }
+ 
 });
