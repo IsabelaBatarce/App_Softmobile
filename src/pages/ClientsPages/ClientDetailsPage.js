@@ -88,7 +88,8 @@ const styles = StyleSheet.create({
     fontSize: 20,
     marginTop: 5,
     marginBottom: 5,
-    color: '#212121'
+    color: '#212121',
+    alignSelf: 'center'
   },
   container: {
     borderRadius: 3,

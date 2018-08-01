@@ -13,7 +13,6 @@ import CategoryItensPage from './src/pages/CategoryItensPage';
 import AddClientPage from './src/pages/ClientsPages/AddClientPage';
 import PrimaryLogin from './src/pages/LoginPages/PrimaryLogin';
 import SecondaryLogin from './src/pages/LoginPages/SecondaryLogin';
-import ClientFilterPage from './src/pages/ClientsPages/ClientFilterPage';
 import ListClientPage from './src/pages/ClientsPages/ListClientPage';
 import ListSalesPage from './src/pages/SalesPages/ListSalesPage';
 import ProductDetailsPage from './src/pages/ProductsPages/ProductDetailsPage';
@@ -39,6 +38,13 @@ class LogoTitle extends React.Component {
 };
 
 const RootStack = createStackNavigator({
+
+  'ListClientPage':{
+      screen: ListClientPage,
+   },
+ 'ListProductsPage':{
+    screen:ListProductsPage
+  },
  'ListClientPage':{
       screen: ListClientPage,
    },
@@ -52,9 +58,7 @@ const RootStack = createStackNavigator({
             }
         }
       },
- 'ListProductsPage':{
-    screen:ListProductsPage
-  },
+ 
  'ProductDetailsPage':{
     screen: ProductDetailsPage
  },
@@ -82,10 +86,6 @@ const RootStack = createStackNavigator({
 'ListDidntSyncSalesPage':{
     screen:ListDidntSyncSalesPage
  },
-'ClientFilterPage':{
-      screen: ClientFilterPage
-    },
-
 
 'test':{
   screen:test
