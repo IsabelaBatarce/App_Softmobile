@@ -38,7 +38,19 @@ class LogoTitle extends React.Component {
 };
 
 const RootStack = createStackNavigator({
-
+'test':{
+  screen:test
+} ,
+   'Login': {
+        screen: PrimaryLogin,
+        navigationOptions:{
+          headerTitle: <LogoTitle />,
+        headerStyle: {
+            backgroundColor: '#bf360c',
+            height: 250
+            }
+        }
+      },
   'ListClientPage':{
       screen: ListClientPage,
    },
@@ -53,7 +65,7 @@ const RootStack = createStackNavigator({
         navigationOptions:{
           headerTitle: <LogoTitle />,
         headerStyle: {
-            backgroundColor: '#e24d4d',
+            backgroundColor: '#bf360c',
             height: 250
             }
         }
@@ -62,16 +74,7 @@ const RootStack = createStackNavigator({
  'ProductDetailsPage':{
     screen: ProductDetailsPage
  },
-   'Login': {
-        screen: PrimaryLogin,
-        navigationOptions:{
-          headerTitle: <LogoTitle />,
-        headerStyle: {
-            backgroundColor: '#e24d4d',
-            height: 250
-            }
-        }
-      },
+  
  
 
  
@@ -87,9 +90,7 @@ const RootStack = createStackNavigator({
     screen:ListDidntSyncSalesPage
  },
 
-'test':{
-  screen:test
-} , 
+ 
    
  'ListSyncSalesPage':{
     screen:ListSyncSalesPage

@@ -10,8 +10,8 @@ export default class CategoryItensPage extends React.Component {
     return (
       <ScrollView>
       <View style={styles.container}>
-        
         <View style={styles.listCategory}>
+          
           <ButtonItemCategory nameCategory={'Ferramentas'}/>
           <ButtonItemCategory nameCategory={'Caixas'}/>
           <ButtonItemCategory nameCategory={'Roupas'}/>
@@ -36,6 +36,7 @@ export default class CategoryItensPage extends React.Component {
           <ButtonItemCategory nameCategory={'Livros'}/>
           <ButtonItemCategory nameCategory={'Eletronicos'}/>
           <ButtonItemCategory nameCategory={'Papelarias'}/>
+      
         </View>
       </View>
       </ScrollView>

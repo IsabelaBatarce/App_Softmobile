@@ -9,21 +9,38 @@ import {
 } from 'react-native';
 import { List, ListItem, Icon } from 'react-native-elements';
 import ActionButton from 'react-native-action-button';
-
+import ModalList from '../../components/ModalList';
 
 export default class ListSalesPage extends React.Component {
  
+  constructor(props){
+    super(props);
+    this._onPressAdd = this._onPressAdd.bind(this);
+  }
+
+
+  componentWillMount() {
+    this.props.navigation.setParams({ _OnPressAdd: this._onPressAdd });
+  }
+
+  _onPressAdd(){
+    this.refs.ModalList.showAddModal();
+  }
   static navigationOptions = ({ navigation }) => {
     return {
       headerRight: (
         <View style={styles.header}>
           <TouchableOpacity 
- 
-          style={{marginRight: 20}}>
+           style={{marginRight: 20}}>
           <Icon name='search' color='white' />
           </TouchableOpacity>
           
-         
+         <TouchableOpacity 
+          onPress={ navigation.getParam('_OnPressAdd') } 
+          style={{marginRight: 20}}>
+          <Icon name='more-vert' color='white' />
+          </TouchableOpacity>
+        
         </View>
       ),
       headerLeft:(
@@ -44,7 +61,8 @@ export default class ListSalesPage extends React.Component {
                 ,{ title: 'Trips', subtitle: 'Nome empresa'  },{ title: 'Trips', subtitle: 'Nome empresa'  },{ title: 'Trips', subtitle: 'Nome empresa'  },{ title: 'Trips', subtitle: 'Nome empresa'  },{ title: 'Trips', subtitle: 'Nome empresa'  },{ title: 'Trips', subtitle: 'Nome empresa'  },{ title: 'Trips', subtitle: 'Nome empresa'  }]
    return (
       <View>
-        <ScrollView>
+        <ModalList style={ styles.modal } ref={'ModalList'}></ModalList>
+       <ScrollView>
 
         
         <View style={styles.container}>
@@ -73,10 +91,10 @@ export default class ListSalesPage extends React.Component {
   }}>
             <Icon name="edit" color="white" style={styles.actionButtonIcon} />
           </ActionButton.Item>
-          <ActionButton.Item size={46}buttonColor='#303f9f' title="Sync" onPress={() => {
+          <ActionButton.Item size={46}buttonColor='#303f9f' title="Deletar" onPress={() => {
     Alert.alert('Deseja realizar a sincronização?')
   }}>
-            <Icon name="sync" color="white" style={styles.actionButtonIcon} />
+            <Icon name="delete" color="white" style={styles.actionButtonIcon} />
           </ActionButton.Item>
         </ActionButton>
       </View>
@@ -99,7 +117,8 @@ const styles = StyleSheet.create({
   },
 
   
-  modal:{
-    flex: 1
-  }
+ header:{
+  flex:1,
+  flexDirection: 'row'
+ }
 });
