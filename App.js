@@ -60,16 +60,16 @@ const RootStack = createStackNavigator({
             }
           },
 
-  'ListClientPage':{
-      screen: ListClientPage,
-   },
+
  'ListProductsPage':{
     screen:ListProductsPage
   },
  'ListClientPage':{
       screen: ListClientPage,
    },
-
+ 'ListClientPage':{
+     screen: ListClientPage,
+  },
 
  'ProductDetailsPage':{
     screen: ProductDetailsPage

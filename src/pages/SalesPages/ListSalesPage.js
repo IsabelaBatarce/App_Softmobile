@@ -12,32 +12,26 @@ import ActionButton from 'react-native-action-button';
 
 
 export default class ListSalesPage extends React.Component {
- 
+
   static navigationOptions = ({ navigation }) => {
     return {
       headerRight: (
         <View style={styles.header}>
-          <TouchableOpacity 
- 
+          <TouchableOpacity
+
           style={{marginRight: 20}}>
           <Icon name='search' color='white' />
           </TouchableOpacity>
-          
-         
+
+
         </View>
-      ),
-      headerLeft:(
-       <TouchableOpacity
-         style={{marginLeft: 20}}>
-         <Icon name='arrow-back' color='white' />
-         </TouchableOpacity>
       )
     }
   };
 
-  
+
   render() {
-    
+
     const list = [{ title: 'Trips', subtitle: 'Nome empresa' },{ title: 'Trips', subtitle: 'Nome empresa'  },{ title: 'Trips', subtitle: 'Nome empresa'},{ title: 'Trips', subtitle: 'Nome empresa'},{ title: 'Trips', subtitle: 'Nome empresa'  },{ title: 'Trips', subtitle: 'Nome empresa' }
                 ,{ title: 'Trips', subtitle: 'Nome empresa'  },{ title: 'Trips', subtitle: 'Nome empresa'  },{ title: 'Trips', subtitle: 'Nome empresa'  },{ title: 'Trips', subtitle: 'Nome empresa'  },{ title: 'Trips', subtitle: 'Nome empresa'  },{ title: 'Trips', subtitle: 'Nome empresa'},{ title: 'Trips', subtitle: 'Nome empresa' }
                 ,{ title: 'Trips', subtitle: 'Nome empresa'  },{ title: 'Trips', subtitle: 'Nome empresa'  },{ title: 'Trips', subtitle: 'Nome empresa'  },{ title: 'Trips', subtitle: 'Nome empresa'  },{ title: 'Trips', subtitle: 'Nome empresa'  },{ title: 'Trips', subtitle: 'Nome empresa'  },{ title: 'Trips', subtitle: 'Nome empresa'}
@@ -46,7 +40,7 @@ export default class ListSalesPage extends React.Component {
       <View>
         <ScrollView>
 
-        
+
         <View style={styles.container}>
 
         <Text style={ styles.title }>Vendas</Text>
@@ -95,10 +89,10 @@ const styles = StyleSheet.create({
     fontSize: 25,
     textAlign: 'center',
     marginTop: 20,
-    
+
   },
 
-  
+
   modal:{
     flex: 1
   }

@@ -17,7 +17,7 @@ import ListClientPage from './ClientsPages/ListClientPage';
 import ModalList from '../components/ModalList';
 
 export default class ItemCategoryPage extends Component {
-    
+
     constructor(props){
     super(props);
     this._onPressAdd = this._onPressAdd.bind(this);
@@ -27,13 +27,13 @@ export default class ItemCategoryPage extends Component {
     return {
       headerRight: (
         <View style={styles.header}>
-          <TouchableOpacity 
+          <TouchableOpacity
            style={{marginRight: 20}}>
           <Icon name='search' color='white' />
           </TouchableOpacity>
-          
+
           <TouchableOpacity
-           onPress={ navigation.getParam('_OnPressAdd') } 
+           onPress={ navigation.getParam('_OnPressAdd') }
            style={{marginRight: 20}}>
            <Icon name='more-vert' color='white' />
           </TouchableOpacity>
@@ -48,24 +48,24 @@ export default class ItemCategoryPage extends Component {
     }
   };
 */
-  componentWillMount() {
-    this.props.navigation.setParams({ _OnPressAdd: this._onPressAdd });
-  }
-
-  _onPressAdd(){
-    this.refs.ModalList.showAddModal();
-  }
-    
+  // componentWillMount() {
+  //   this.props.navigation.setParams({ _OnPressAdd: this._onPressAdd });
+  // }
+  //
+  // _onPressAdd(){
+  //   this.refs.ModalList.showAddModal();
+  // }
+  //
 
     render() {
     return (
       <ScrollView>
-       <ModalList style={ styles.modal } ref={'ModalList'}></ModalList>
+       // <ModalList style={ styles.modal } ref={'ModalList'}></ModalList>
       <Card>
-        
+
       <Text style={ styles.title }>Nome Item</Text>
       <View style={styles.container}>
-         
+
           <View style={styles.container1}>
             <FormDetails style={styles.nome} NomeCampo={'Nome reduzido'} ValorCampo={'Nome reduzido item'}/>
             <FormDetails style={styles.marca} NomeCampo={'Marca'} ValorCampo={'Nome da marca'}/>
@@ -78,19 +78,19 @@ export default class ItemCategoryPage extends Component {
               <FormDetails NomeCampo={'Sub-unidade'} ValorCampo={'Sub-unidade'}/>
               <FormDetails NomeCampo={'Preço'} ValorCampo={'Preço'}/>
             </View>
-           
+
       </View>
 
 
       </Card>
-      
+
       </ScrollView>
     );
   }
 }
 
 const styles = StyleSheet.create({
- 
+
   title:{
     fontSize: 20,
     marginTop: 5,
@@ -108,7 +108,7 @@ const styles = StyleSheet.create({
     marginTop: 10,
     marginBottom: 10,
     flex: 1,
-    
+
   },
     header:{
     flex: 1,
@@ -118,6 +118,6 @@ const styles = StyleSheet.create({
     marginTop: 10,
     marginBottom: 10,
     flexDirection: 'row',
-    
+
   }
 });

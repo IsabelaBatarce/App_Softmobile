@@ -30,14 +30,6 @@ export default class test extends Component {
           </View>
 
         ),
-        headerLeft:(
-         <TouchableOpacity
-           style={{marginLeft: 20}}>
-           <Icon name='arrow-back' color='white' />
-           </TouchableOpacity>
-        )
-
-
 
       }
     };
