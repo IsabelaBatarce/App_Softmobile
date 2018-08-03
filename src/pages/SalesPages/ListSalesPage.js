@@ -12,7 +12,7 @@ import ActionButton from 'react-native-action-button';
 import ModalList from '../../components/ModalList';
 
 export default class ListSalesPage extends React.Component {
- 
+
   constructor(props){
     super(props);
     this._onPressAdd = this._onPressAdd.bind(this);
@@ -31,17 +31,17 @@ export default class ListSalesPage extends React.Component {
     return {
       headerRight: (
         <View style={styles.header}>
-          <TouchableOpacity 
+          <TouchableOpacity
            style={{marginRight: 20}}>
           <Icon name='search' color='white' />
           </TouchableOpacity>
-          
-         <TouchableOpacity 
-          onPress={ navigation.getParam('_OnPressAdd') } 
+
+         <TouchableOpacity
+          onPress={ navigation.getParam('_OnPressAdd') }
           style={{marginRight: 20}}>
           <Icon name='more-vert' color='white' />
           </TouchableOpacity>
-        
+
         </View>
       ),
       headerLeft:(
@@ -53,9 +53,9 @@ export default class ListSalesPage extends React.Component {
     }
   };
 
-  
+
   render() {
-    
+
     const list = [{ title: 'Trips', subtitle: 'Nome empresa' },{ title: 'Trips', subtitle: 'Nome empresa'  },{ title: 'Trips', subtitle: 'Nome empresa'},{ title: 'Trips', subtitle: 'Nome empresa'},{ title: 'Trips', subtitle: 'Nome empresa'  },{ title: 'Trips', subtitle: 'Nome empresa' }
                 ,{ title: 'Trips', subtitle: 'Nome empresa'  },{ title: 'Trips', subtitle: 'Nome empresa'  },{ title: 'Trips', subtitle: 'Nome empresa'  },{ title: 'Trips', subtitle: 'Nome empresa'  },{ title: 'Trips', subtitle: 'Nome empresa'  },{ title: 'Trips', subtitle: 'Nome empresa'},{ title: 'Trips', subtitle: 'Nome empresa' }
                 ,{ title: 'Trips', subtitle: 'Nome empresa'  },{ title: 'Trips', subtitle: 'Nome empresa'  },{ title: 'Trips', subtitle: 'Nome empresa'  },{ title: 'Trips', subtitle: 'Nome empresa'  },{ title: 'Trips', subtitle: 'Nome empresa'  },{ title: 'Trips', subtitle: 'Nome empresa'  },{ title: 'Trips', subtitle: 'Nome empresa'}
@@ -65,7 +65,7 @@ export default class ListSalesPage extends React.Component {
         <ModalList style={ styles.modal } ref={'ModalList'}></ModalList>
        <ScrollView>
 
-        
+
         <View style={styles.container}>
 
         <Text style={ styles.title }>Vendas</Text>
@@ -114,10 +114,10 @@ const styles = StyleSheet.create({
     fontSize: 25,
     textAlign: 'center',
     marginTop: 20,
-    
+
   },
 
-  
+
  header:{
   flex:1,
   flexDirection: 'row'

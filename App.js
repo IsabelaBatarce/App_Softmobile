@@ -41,6 +41,7 @@ class LogoTitle extends React.Component {
 };
 
 const RootStack = createStackNavigator({
+<<<<<<< HEAD
 'ListSalesPage':{
       screen: ListSalesPage
     },
@@ -51,6 +52,12 @@ const RootStack = createStackNavigator({
   screen:FilterSyncSalesPage
 },
  
+=======
+
+  'ListSalesPage':{
+       screen: ListSalesPage
+  },
+>>>>>>> ac3ffe4703c463277646d85f9bc20856bbe3f2a3
 
   'Login': {
        screen: PrimaryLogin,
@@ -73,15 +80,25 @@ const RootStack = createStackNavigator({
             }
           },
 
+<<<<<<< HEAD
 'ListClientPage':{
       screen: ListClientPage,
    },
 'ListProductsPage':{
+=======
+
+  'ListClientPage':{
+      screen: ListClientPage,
+   },
+
+ 'ListProductsPage':{
+>>>>>>> ac3ffe4703c463277646d85f9bc20856bbe3f2a3
     screen:ListProductsPage
   },
 'ListClientPage':{
       screen: ListClientPage,
    },
+<<<<<<< HEAD
 
 'ProductDetailsPage':{
     screen: ProductDetailsPage
@@ -97,6 +114,29 @@ const RootStack = createStackNavigator({
   screen: ListSyncErrorSalesPage
 },
 'ListSyncSalesPage':{
+=======
+ 'ListClientPage':{
+     screen: ListClientPage,
+  },
+
+ 'ProductDetailsPage':{
+    screen: ProductDetailsPage
+ },
+
+
+  'ItemCategoryPage':{
+    screen:ItemCategoryPage
+  },
+
+
+'ListDidntSyncSalesPage':{
+    screen:ListDidntSyncSalesPage
+ },
+
+
+
+ 'ListSyncSalesPage':{
+>>>>>>> ac3ffe4703c463277646d85f9bc20856bbe3f2a3
     screen:ListSyncSalesPage
  },
 

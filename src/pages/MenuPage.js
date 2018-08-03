@@ -20,6 +20,10 @@ export default class MenuPage extends React.Component {
           imgBtnMenu={require('../images/img_btn_vendas.png')}
           onPressButton={ () => this.props.navigation.navigate('ListSalesPage') }
         />
+        <ButtonImage
+          imgBtnMenu={require('../images/img_btn_sync.png')}
+          onPressButton={ () => this.props.navigation.navigate('ListSalesPage') }
+        />
       </View>
     );
   }
