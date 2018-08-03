@@ -1,70 +1,69 @@
+/* @flow */
+
 import React, { Component } from 'react';
-import {   View,
+import {
+  View,
   Text,
   StyleSheet,
-  ScrollView,
-  TouchableOpacity } from 'react-native';
-import { FormLabel, FormInput, FormValidationMessage } from 'react-native-elements'
-import { CheckBox,Card } from 'react-native-elements'
+  Alert,
+  TouchableOpacity
+} from 'react-native';
+import Modal from 'react-native-modalbox';
+import { List, ListItem } from 'react-native-elements'
 
-export default class test extends Component {
-  constructor(props) {
-    
-    super(props);
-    this.state = {checked: false};
-  
+import ListSalesPage from '../pages/SalesPages/ListSalesPage';
+
+
+export default class ModalList extends Component {
+constructor(props){
+  super(props);
+}
+  showAddModal = () =>{
+    this.refs.modal.open();
   }
- 
-/* 
-   onButtonPressSincronizaadas = () => {
-    this.props.navigation.navigate('');
-  }
-    
-  }*/
+
   render() {
+
+    const list = [
+     
+      {
+        item: 'Adicionar',
+      },
+      {
+        item: 'Editar',
+      },
+      {
+        item: 'Excluir',
+      },
+      
+    ]
     return (
-      <View style={styles.container}>
-        <Card>
-          
-          <Text 
-            style={styles.texto}>
-            Escolha um item
-          </Text>
-          
-          <CheckBox 
-            containerStyle={styles.CheckBox}
-            left
-            title='Vendas sincronizadas'
-            
-          />
-          <CheckBox 
-            containerStyle={styles.CheckBox}
-            left
-            title='Vendas não sincronizadas'
-          />
-          <CheckBox
-            left
-            title='Vendas com erro de sincronização'
-          />
-        
-        </Card>
-      </View>  
+      <Modal
+        style={ styles.modal }
+        backdrop={ true }
+        backButtonClose={ true }
+        position={"center"}
+        ref={'modal'}
+      >
+      <List style={{marginTop: 0}}>
+        {
+          list.map((l, i) => (
+            <ListItem
+              title={l.item}
+            />
+          ))
+        }
+      </List>
+      </Modal>
     );
   }
 }
 
 const styles = StyleSheet.create({
-container:{
-  flex:1,
-  marginTop: 20,
-},
-texto:{
-  fontSize: 20,
-  marginBottom: 20,     
-  alignSelf: 'center',
-  color:'#263238'
-},
-CheckBox:{
-  backgroundColor: '#f5f5f5'
-}
-})
+  modal: {
+    height: 300,
+    width: 300,
+    justifyContent: 'center',
+    alignItems: 'center'
+  },
+});

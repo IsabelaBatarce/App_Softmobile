@@ -1,44 +1,32 @@
-/* @flow */
-
 import React, { Component } from 'react';
-import {
-  View,
+import {   View,
   Text,
   StyleSheet,
-  Alert,
-  TouchableOpacity
-} from 'react-native';
-import Modal from 'react-native-modalbox';
-import { List, ListItem } from 'react-native-elements'
+  ScrollView,
+  TouchableOpacity } from 'react-native';
+import { FormLabel, FormInput, FormValidationMessage } from 'react-native-elements'
 import { CheckBox,Card } from 'react-native-elements'
-import ListSalesPage from '../pages/SalesPages/ListSalesPage';
 
-
-export default class ModalList extends Component {
-constructor(props){
-  super(props);
-  this._onPressSync = this._onPressSync.bind(this);
-
-}
-  showAddModal = () =>{
-    this.refs.modal.open();
+export default class FilterSyncSalesPage extends Component {
+  constructor(props) {
+    
+    super(props);
+    this.state = {checked: false};
+  
   }
  
- _onPressSync(){
-    this.props.navigation.navigate('ListSyncErrorSalesPage')
+/* 
+   onButtonPressSincronizaadas = () => {
+    this.props.navigation.navigate('');
   }
-
+    
+  }*/
   render() {
     return (
-      <Modal
-        style={ styles.modal }
-        backdrop={ true }
-        backButtonClose={ true }
-        position={"center"}
-        ref={'modal'}
-      >
-       <View>
-       <Text 
+      <View style={styles.container}>
+        <Card>
+          
+          <Text 
             style={styles.texto}>
             Escolha um item
           </Text>
@@ -48,7 +36,7 @@ constructor(props){
             left
             title='Vendas sincronizadas'
             onPress = { 
-              this._onPressSync 
+              () => this.props.navigation.navigate('ListSyncSalesPage') 
             } 
           />
           <CheckBox 
@@ -67,18 +55,24 @@ constructor(props){
             } 
           />
         
-      
-      </View> 
-      </Modal>
+        </Card>
+      </View>  
     );
   }
 }
 
 const styles = StyleSheet.create({
-  modal: {
-    height: 300,
-    width: 300,
-    justifyContent: 'center',
-    alignItems: 'center'
-  },
-});
+container:{
+  flex:1,
+  marginTop: 20,
+},
+texto:{
+  fontSize: 20,
+  marginBottom: 20,     
+  alignSelf: 'center',
+  color:'#263238'
+},
+CheckBox:{
+  backgroundColor: '#f5f5f5'
+}
+})

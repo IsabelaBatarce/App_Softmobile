@@ -5,6 +5,8 @@ import { Toolbar } from 'react-native-material-ui';
 
 import SearchBar from './src/components/SearchBar';
 import ListSyncSalesPage from './src/pages/SalesPages/ListSyncSalesPage';
+import FilterSyncSalesPage from './src/pages/SalesPages/FilterSyncSalesPage';
+import ListSyncErrorSalesPage from './src/pages/SalesPages/ListSyncErrorSalesPage';
 import test from './src/pages/test';
 import ListProductsPage from './src/pages/ProductsPages/ListProductsPage';
 import ItemCategoryPage from './src/pages/ItemCategoryPage';
@@ -39,21 +41,17 @@ class LogoTitle extends React.Component {
 };
 
 const RootStack = createStackNavigator({
-<<<<<<< HEAD
+'ListSalesPage':{
+      screen: ListSalesPage
+    },
 'test':{
   screen:test
 } ,
-   'Login': {
-        screen: PrimaryLogin,
-        navigationOptions:{
-          headerTitle: <LogoTitle />,
-        headerStyle: {
-            backgroundColor: '#bf360c',
-            height: 250
-            }
-        }
-      },
-=======
+'FilterSyncSalesPage':{
+  screen:FilterSyncSalesPage
+},
+ 
+
   'Login': {
        screen: PrimaryLogin,
        navigationOptions:{
@@ -75,64 +73,30 @@ const RootStack = createStackNavigator({
             }
           },
 
->>>>>>> ed2143d02b32be5ff7a8c1a17b6aa6fd9cf8835f
-  'ListClientPage':{
+'ListClientPage':{
       screen: ListClientPage,
    },
- 'ListProductsPage':{
+'ListProductsPage':{
     screen:ListProductsPage
   },
- 'ListClientPage':{
+'ListClientPage':{
       screen: ListClientPage,
    },
-<<<<<<< HEAD
- 'SecondaryLogin': {
-        screen: SecondaryLogin,
-        navigationOptions:{
-          headerTitle: <LogoTitle />,
-        headerStyle: {
-            backgroundColor: '#bf360c',
-            height: 250
-            }
-        }
-      },
- 
- 'ProductDetailsPage':{
+
+'ProductDetailsPage':{
     screen: ProductDetailsPage
  },
-  
- 
-
- 
-=======
-
-
- 'ProductDetailsPage':{
-    screen: ProductDetailsPage
- },
->>>>>>> ed2143d02b32be5ff7a8c1a17b6aa6fd9cf8835f
-
-  'ItemCategoryPage':{
+'ItemCategoryPage':{
     screen:ItemCategoryPage
   },
 
- 'ListSalesPage':{
-      screen: ListSalesPage
-    },
 'ListDidntSyncSalesPage':{
     screen:ListDidntSyncSalesPage
  },
-
-<<<<<<< HEAD
- 
-   
-=======
-'test':{
-  screen:test
-} ,
-
->>>>>>> ed2143d02b32be5ff7a8c1a17b6aa6fd9cf8835f
- 'ListSyncSalesPage':{
+'ListSyncErrorSalesPage':{
+  screen: ListSyncErrorSalesPage
+},
+'ListSyncSalesPage':{
     screen:ListSyncSalesPage
  },
 

@@ -4,29 +4,15 @@ import {
   Text,
   StyleSheet,
   ScrollView,
-  TouchableOpacity,
+  TouchableOpacity, 
   Alert
 } from 'react-native';
 import { List, ListItem, Icon } from 'react-native-elements';
 import ActionButton from 'react-native-action-button';
-import ModalList from '../../components/ModalList';
-
-export default class ListSalesPage extends React.Component {
- 
-  constructor(props){
-    super(props);
-    this._onPressAdd = this._onPressAdd.bind(this);
-  }
 
 
-  componentWillMount() {
-    this.props.navigation.setParams({ _OnPressAdd: this._onPressAdd });
-  }
-
-  _onPressAdd(){
-    this.refs.ModalList.showAddModal();
-  }
- 
+export default class ListSyncErrorSalesPage extends React.Component {
+  
   static navigationOptions = ({ navigation }) => {
     return {
       headerRight: (
@@ -36,12 +22,7 @@ export default class ListSalesPage extends React.Component {
           <Icon name='search' color='white' />
           </TouchableOpacity>
           
-         <TouchableOpacity 
-          onPress={ navigation.getParam('_OnPressAdd') } 
-          style={{marginRight: 20}}>
-          <Icon name='more-vert' color='white' />
-          </TouchableOpacity>
-        
+      
         </View>
       ),
       headerLeft:(
@@ -54,6 +35,7 @@ export default class ListSalesPage extends React.Component {
   };
 
   
+
   render() {
     
     const list = [{ title: 'Trips', subtitle: 'Nome empresa' },{ title: 'Trips', subtitle: 'Nome empresa'  },{ title: 'Trips', subtitle: 'Nome empresa'},{ title: 'Trips', subtitle: 'Nome empresa'},{ title: 'Trips', subtitle: 'Nome empresa'  },{ title: 'Trips', subtitle: 'Nome empresa' }
@@ -62,19 +44,17 @@ export default class ListSalesPage extends React.Component {
                 ,{ title: 'Trips', subtitle: 'Nome empresa'  },{ title: 'Trips', subtitle: 'Nome empresa'  },{ title: 'Trips', subtitle: 'Nome empresa'  },{ title: 'Trips', subtitle: 'Nome empresa'  },{ title: 'Trips', subtitle: 'Nome empresa'  },{ title: 'Trips', subtitle: 'Nome empresa'  },{ title: 'Trips', subtitle: 'Nome empresa'  }]
    return (
       <View>
-        <ModalList style={ styles.modal } ref={'ModalList'}></ModalList>
-       <ScrollView>
+        <ScrollView>
 
         
         <View style={styles.container}>
 
-        <Text style={ styles.title }>Vendas</Text>
+        <Text style={ styles.title }>Vendas com erro de Sync</Text>
 
         <List>
           {
             list.map((item, i) => (
-             <TouchableOpacity onPress={ () => this.props.navigation.navigate('ItemCategoryPage') }>
-
+              <TouchableOpacity>
               <ListItem
                 key={i}
                 title={item.title}
@@ -86,16 +66,11 @@ export default class ListSalesPage extends React.Component {
         </List>
         </View>
         </ScrollView>
-      <ActionButton buttonColor="rgba(231,76,60,1)">
-          <ActionButton.Item size={46} buttonColor='#009688' title="Editar" onPress={() => {
-    Alert.alert('Deseja editar esta venda?')
-  }}>
-            <Icon name="edit" color="white" style={styles.actionButtonIcon} />
-          </ActionButton.Item>
-          <ActionButton.Item size={46}buttonColor='#303f9f' title="Deletar" onPress={() => {
+              <ActionButton buttonColor="rgba(231,76,60,1)">
+           <ActionButton.Item size={46}buttonColor='#303f9f' title="Sync" onPress={() => {
     Alert.alert('Deseja realizar a sincronização?')
   }}>
-            <Icon name="delete" color="white" style={styles.actionButtonIcon} />
+            <Icon name="sync" color="white" style={styles.actionButtonIcon} />
           </ActionButton.Item>
         </ActionButton>
       </View>
@@ -111,15 +86,21 @@ const styles = StyleSheet.create({
   },
 
   title:{
-    fontSize: 25,
+    fontSize: 20,
     textAlign: 'center',
     marginTop: 20,
     
   },
-
-  
- header:{
-  flex:1,
-  flexDirection: 'row'
- }
+  header:{
+    flex: 1,
+    flexDirection: 'row'
+  },
+   actionButtonIcon: {
+    fontSize: 20,
+    height: 22,
+    color: 'white',
+  },
+  modal:{
+    flex: 1
+  }
 });
