@@ -1,6 +1,7 @@
 import { createStackNavigator } from 'react-navigation';
 import React from 'react';
 import { Image, View, TouchableOpacity, Text } from 'react-native';
+import { Toolbar } from 'react-native-material-ui';
 
 import SearchBar from './src/components/SearchBar';
 import ListSyncSalesPage from './src/pages/SalesPages/ListSyncSalesPage';
@@ -17,7 +18,7 @@ import ListClientPage from './src/pages/ClientsPages/ListClientPage';
 import ListSalesPage from './src/pages/SalesPages/ListSalesPage';
 import ProductDetailsPage from './src/pages/ProductsPages/ProductDetailsPage';
 import ClientDetailsPage from './src/pages/ClientsPages/ClientDetailsPage';
-import { Toolbar } from 'react-native-material-ui';
+
 
 
 class LogoTitle extends React.Component {
@@ -38,6 +39,7 @@ class LogoTitle extends React.Component {
 };
 
 const RootStack = createStackNavigator({
+<<<<<<< HEAD
 'test':{
   screen:test
 } ,
@@ -51,6 +53,29 @@ const RootStack = createStackNavigator({
             }
         }
       },
+=======
+  'Login': {
+       screen: PrimaryLogin,
+       navigationOptions:{
+         headerTitle: <LogoTitle />,
+       headerStyle: {
+           backgroundColor: '#e24d4d',
+           height: 250
+           }
+       }
+     },
+     'SecondaryLogin': {
+            screen: SecondaryLogin,
+            navigationOptions:{
+              headerTitle: <LogoTitle />,
+            headerStyle: {
+                backgroundColor: '#e24d4d',
+                height: 250
+                }
+            }
+          },
+
+>>>>>>> ed2143d02b32be5ff7a8c1a17b6aa6fd9cf8835f
   'ListClientPage':{
       screen: ListClientPage,
    },
@@ -60,6 +85,7 @@ const RootStack = createStackNavigator({
  'ListClientPage':{
       screen: ListClientPage,
    },
+<<<<<<< HEAD
  'SecondaryLogin': {
         screen: SecondaryLogin,
         navigationOptions:{
@@ -78,11 +104,18 @@ const RootStack = createStackNavigator({
  
 
  
+=======
+
+
+ 'ProductDetailsPage':{
+    screen: ProductDetailsPage
+ },
+>>>>>>> ed2143d02b32be5ff7a8c1a17b6aa6fd9cf8835f
 
   'ItemCategoryPage':{
     screen:ItemCategoryPage
   },
- 
+
  'ListSalesPage':{
       screen: ListSalesPage
     },
@@ -90,8 +123,15 @@ const RootStack = createStackNavigator({
     screen:ListDidntSyncSalesPage
  },
 
+<<<<<<< HEAD
  
    
+=======
+'test':{
+  screen:test
+} ,
+
+>>>>>>> ed2143d02b32be5ff7a8c1a17b6aa6fd9cf8835f
  'ListSyncSalesPage':{
     screen:ListSyncSalesPage
  },
@@ -99,12 +139,12 @@ const RootStack = createStackNavigator({
   'AddClientPage':{
     screen: AddClientPage,
    },
-   
+
  'ClientDetailsPage': {
       screen: ClientDetailsPage
     },
-  
-   
+
+
     'MenuPage': {
       screen: MenuPage
     },
@@ -112,8 +152,8 @@ const RootStack = createStackNavigator({
     'CategoryItensPage': {
       screen: CategoryItensPage
     },
-   
-    
+
+
 
   },{
 
