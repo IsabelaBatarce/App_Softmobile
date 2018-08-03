@@ -39,6 +39,11 @@ class LogoTitle extends React.Component {
 };
 
 const RootStack = createStackNavigator({
+
+  'ListSalesPage':{
+       screen: ListSalesPage
+  },
+
   'Login': {
        screen: PrimaryLogin,
        navigationOptions:{
@@ -84,9 +89,7 @@ const RootStack = createStackNavigator({
     screen:ItemCategoryPage
   },
 
- 'ListSalesPage':{
-      screen: ListSalesPage
-    },
+
 'ListDidntSyncSalesPage':{
     screen:ListDidntSyncSalesPage
  },

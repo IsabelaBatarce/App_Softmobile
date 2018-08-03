@@ -12,10 +12,7 @@ import ActionButton from 'react-native-action-button';
 import ModalList from '../../components/ModalList';
 
 export default class ListSalesPage extends React.Component {
-<<<<<<< HEAD
 
-=======
- 
   constructor(props){
     super(props);
     this._onPressAdd = this._onPressAdd.bind(this);
@@ -29,33 +26,28 @@ export default class ListSalesPage extends React.Component {
   _onPressAdd(){
     this.refs.ModalList.showAddModal();
   }
->>>>>>> 6cae4b49c43f6152a760f2241db1400207182852
   static navigationOptions = ({ navigation }) => {
     return {
       headerRight: (
         <View style={styles.header}>
-<<<<<<< HEAD
           <TouchableOpacity
-
-          style={{marginRight: 20}}>
-          <Icon name='search' color='white' />
-          </TouchableOpacity>
-
-
-=======
-          <TouchableOpacity 
            style={{marginRight: 20}}>
           <Icon name='search' color='white' />
           </TouchableOpacity>
-          
-         <TouchableOpacity 
-          onPress={ navigation.getParam('_OnPressAdd') } 
+
+         <TouchableOpacity
+          onPress={ navigation.getParam('_OnPressAdd') }
           style={{marginRight: 20}}>
           <Icon name='more-vert' color='white' />
           </TouchableOpacity>
-        
->>>>>>> 6cae4b49c43f6152a760f2241db1400207182852
+
         </View>
+      ),
+      headerLeft:(
+       <TouchableOpacity
+         style={{marginLeft: 20}}>
+         <Icon name='arrow-back' color='white' />
+         </TouchableOpacity>
       )
     }
   };
@@ -124,16 +116,9 @@ const styles = StyleSheet.create({
 
   },
 
-<<<<<<< HEAD
 
-  modal:{
-    flex: 1
-  }
-=======
-  
  header:{
   flex:1,
   flexDirection: 'row'
  }
->>>>>>> 6cae4b49c43f6152a760f2241db1400207182852
 });
