@@ -61,6 +61,10 @@ const RootStack = createStackNavigator({
           },
 
 
+  'ListClientPage':{
+      screen: ListClientPage,
+   },
+
  'ListProductsPage':{
     screen:ListProductsPage
   },
@@ -75,6 +79,7 @@ const RootStack = createStackNavigator({
     screen: ProductDetailsPage
  },
 
+
   'ItemCategoryPage':{
     screen:ItemCategoryPage
   },
@@ -86,9 +91,7 @@ const RootStack = createStackNavigator({
     screen:ListDidntSyncSalesPage
  },
 
-'test':{
-  screen:test
-} ,
+
 
  'ListSyncSalesPage':{
     screen:ListSyncSalesPage

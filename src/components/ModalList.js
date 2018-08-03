@@ -27,11 +27,15 @@ constructor(props){
     const list = [
      
       {
-        item: 'Excluir',
+        item: 'Adicionar',
       },
       {
         item: 'Editar',
       },
+      {
+        item: 'Excluir',
+      },
+      
     ]
     return (
       <Modal
