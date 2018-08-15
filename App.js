@@ -5,6 +5,8 @@ import { Toolbar } from 'react-native-material-ui';
 
 import SearchBar from './src/components/SearchBar';
 import ListSyncSalesPage from './src/pages/SalesPages/ListSyncSalesPage';
+import FilterSyncSalesPage from './src/pages/SalesPages/FilterSyncSalesPage';
+import ListSyncErrorSalesPage from './src/pages/SalesPages/ListSyncErrorSalesPage';
 import test from './src/pages/test';
 import ListProductsPage from './src/pages/ProductsPages/ListProductsPage';
 import ItemCategoryPage from './src/pages/ItemCategoryPage';
@@ -39,10 +41,16 @@ class LogoTitle extends React.Component {
 };
 
 const RootStack = createStackNavigator({
+'ListSalesPage':{
+      screen: ListSalesPage
+    },
+'test':{
+  screen:test
+} ,
+'FilterSyncSalesPage':{
+  screen:FilterSyncSalesPage
+},
 
-  'ListSalesPage':{
-       screen: ListSalesPage
-  },
 
   'Login': {
        screen: PrimaryLogin,
@@ -65,15 +73,13 @@ const RootStack = createStackNavigator({
             }
           },
 
-
-  'ListClientPage':{
+'ListClientPage':{
       screen: ListClientPage,
    },
-
- 'ListProductsPage':{
+'ListProductsPage':{
     screen:ListProductsPage
   },
- 'ListClientPage':{
+'ListClientPage':{
       screen: ListClientPage,
    },
  'ListClientPage':{

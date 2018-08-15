@@ -22,23 +22,17 @@ export default class ListSyncSalesPage extends React.Component {
     return {
       headerRight: (
         <View style={styles.header}>
-          <TouchableOpacity 
-          onPress={ navigation.getParam('_OnPressAdd') } 
+          <TouchableOpacity
+          onPress={ navigation.getParam('_OnPressAdd') }
           style={{marginRight: 20}}>
           <Icon name='search' color='white' />
           </TouchableOpacity>
-          
+
           <TouchableOpacity
            style={{marginRight: 20}}>
            <Icon name='more-vert' color='white' />
           </TouchableOpacity>
         </View>
-      ),
-      headerLeft:(
-       <TouchableOpacity
-         style={{marginLeft: 20}}>
-         <Icon name='arrow-back' color='white' />
-         </TouchableOpacity>
       )
     }
   };
@@ -52,7 +46,7 @@ export default class ListSyncSalesPage extends React.Component {
   }
 
   render() {
-    
+
     const list = [{ title: 'Trips', subtitle: 'Nome empresa' },{ title: 'Trips', subtitle: 'Nome empresa'  },{ title: 'Trips', subtitle: 'Nome empresa'},{ title: 'Trips', subtitle: 'Nome empresa'},{ title: 'Trips', subtitle: 'Nome empresa'  },{ title: 'Trips', subtitle: 'Nome empresa' }
                 ,{ title: 'Trips', subtitle: 'Nome empresa'  },{ title: 'Trips', subtitle: 'Nome empresa'  },{ title: 'Trips', subtitle: 'Nome empresa'  },{ title: 'Trips', subtitle: 'Nome empresa'  },{ title: 'Trips', subtitle: 'Nome empresa'  },{ title: 'Trips', subtitle: 'Nome empresa'},{ title: 'Trips', subtitle: 'Nome empresa' }
                 ,{ title: 'Trips', subtitle: 'Nome empresa'  },{ title: 'Trips', subtitle: 'Nome empresa'  },{ title: 'Trips', subtitle: 'Nome empresa'  },{ title: 'Trips', subtitle: 'Nome empresa'  },{ title: 'Trips', subtitle: 'Nome empresa'  },{ title: 'Trips', subtitle: 'Nome empresa'  },{ title: 'Trips', subtitle: 'Nome empresa'}
@@ -62,7 +56,7 @@ export default class ListSyncSalesPage extends React.Component {
         <ModalList style={ styles.modal } ref={'ModalList'}></ModalList>
         <ScrollView>
 
-        
+
         <View style={styles.container}>
 
         <Text style={ styles.title }>Vendas Sincronizadas</Text>
@@ -82,7 +76,7 @@ export default class ListSyncSalesPage extends React.Component {
         </List>
         </View>
         </ScrollView>
-    
+
       </View>
     );
   }
@@ -99,13 +93,13 @@ const styles = StyleSheet.create({
     fontSize: 20,
     textAlign: 'center',
     marginTop: 20,
-    
+
   },
   header:{
     flex: 1,
     flexDirection: 'row'
   },
-  
+
   modal:{
     flex: 1
   }

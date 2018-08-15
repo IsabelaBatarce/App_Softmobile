@@ -12,30 +12,30 @@ export default class CategoryItensPage extends React.Component {
       <View style={styles.container}>
         <View style={styles.listCategory}>
 
-          <ButtonItemCategory nameCategory={'Ferramentas'}/>
-          <ButtonItemCategory nameCategory={'Caixas'}/>
-          <ButtonItemCategory nameCategory={'Roupas'}/>
-          <ButtonItemCategory nameCategory={'Carros'}/>
-          <ButtonItemCategory nameCategory={'Alimentos'}/>
-          <ButtonItemCategory nameCategory={'Livros'}/>
-          <ButtonItemCategory nameCategory={'Eletronicos'}/>
-          <ButtonItemCategory nameCategory={'Papelarias'}/>
-          <ButtonItemCategory nameCategory={'Ferramentas'}/>
-          <ButtonItemCategory nameCategory={'Caixas'}/>
-          <ButtonItemCategory nameCategory={'Roupas'}/>
-          <ButtonItemCategory nameCategory={'Carros'}/>
-          <ButtonItemCategory nameCategory={'Alimentos'}/>
-          <ButtonItemCategory nameCategory={'Livros'}/>
-          <ButtonItemCategory nameCategory={'Eletronicos'}/>
-          <ButtonItemCategory nameCategory={'Papelarias'}/>
-          <ButtonItemCategory nameCategory={'Ferramentas'}/>
-          <ButtonItemCategory nameCategory={'Caixas'}/>
-          <ButtonItemCategory nameCategory={'Roupas'}/>
-          <ButtonItemCategory nameCategory={'Carros'}/>
-          <ButtonItemCategory nameCategory={'Alimentos'}/>
-          <ButtonItemCategory nameCategory={'Livros'}/>
-          <ButtonItemCategory nameCategory={'Eletronicos'}/>
-          <ButtonItemCategory nameCategory={'Papelarias'}/>
+          <ButtonItemCategory _onPressButton={ () => this.props.navigation.navigate('ProductDetailsPage') } nameCategory={'Ferramentas'}/>
+          <ButtonItemCategory _onPressButton={ () => this.props.navigation.navigate('ProductDetailsPage') } nameCategory={'Caixas'}/>
+          <ButtonItemCategory _onPressButton={ () => this.props.navigation.navigate('ProductDetailsPage') } nameCategory={'Roupas'}/>
+          <ButtonItemCategory _onPressButton={ () => this.props.navigation.navigate('ProductDetailsPage') } nameCategory={'Carros'}/>
+          <ButtonItemCategory _onPressButton={ () => this.props.navigation.navigate('ProductDetailsPage') } nameCategory={'Alimentos'}/>
+          <ButtonItemCategory _onPressButton={ () => this.props.navigation.navigate('ProductDetailsPage') } nameCategory={'Livros'}/>
+          <ButtonItemCategory _onPressButton={ () => this.props.navigation.navigate('ProductDetailsPage') } nameCategory={'Eletronicos'}/>
+          <ButtonItemCategory _onPressButton={ () => this.props.navigation.navigate('ProductDetailsPage') } nameCategory={'Papelarias'}/>
+          <ButtonItemCategory _onPressButton={ () => this.props.navigation.navigate('ProductDetailsPage') } nameCategory={'Ferramentas'}/>
+          <ButtonItemCategory _onPressButton={ () => this.props.navigation.navigate('ProductDetailsPage') } nameCategory={'Caixas'}/>
+          <ButtonItemCategory _onPressButton={ () => this.props.navigation.navigate('ProductDetailsPage') } nameCategory={'Roupas'}/>
+          <ButtonItemCategory _onPressButton={ () => this.props.navigation.navigate('ProductDetailsPage') } nameCategory={'Carros'}/>
+          <ButtonItemCategory _onPressButton={ () => this.props.navigation.navigate('ProductDetailsPage') } nameCategory={'Alimentos'}/>
+          <ButtonItemCategory _onPressButton={ () => this.props.navigation.navigate('ProductDetailsPage') } nameCategory={'Livros'}/>
+          <ButtonItemCategory _onPressButton={ () => this.props.navigation.navigate('ProductDetailsPage') } nameCategory={'Eletronicos'}/>
+          <ButtonItemCategory _onPressButton={ () => this.props.navigation.navigate('ProductDetailsPage') } nameCategory={'Papelarias'}/>
+          <ButtonItemCategory _onPressButton={ () => this.props.navigation.navigate('ProductDetailsPage') } nameCategory={'Ferramentas'}/>
+          <ButtonItemCategory _onPressButton={ () => this.props.navigation.navigate('ProductDetailsPage') } nameCategory={'Caixas'}/>
+          <ButtonItemCategory _onPressButton={ () => this.props.navigation.navigate('ProductDetailsPage') } nameCategory={'Roupas'}/>
+          <ButtonItemCategory _onPressButton={ () => this.props.navigation.navigate('ProductDetailsPage') } nameCategory={'Carros'}/>
+          <ButtonItemCategory _onPressButton={ () => this.props.navigation.navigate('ProductDetailsPage') } nameCategory={'Alimentos'}/>
+          <ButtonItemCategory _onPressButton={ () => this.props.navigation.navigate('ProductDetailsPage') } nameCategory={'Livros'}/>
+          <ButtonItemCategory _onPressButton={ () => this.props.navigation.navigate('ProductDetailsPage') } nameCategory={'Eletronicos'}/>
+          <ButtonItemCategory _onPressButton={ () => this.props.navigation.navigate('ProductDetailsPage') } nameCategory={'Papelarias'}/>
 
         </View>
       </View>

@@ -4,7 +4,7 @@ import {
   Text,
   StyleSheet,
   ScrollView,
-  TouchableOpacity, 
+  TouchableOpacity,
   Alert
 } from 'react-native';
 import { List, ListItem, Icon } from 'react-native-elements';
@@ -12,32 +12,26 @@ import ActionButton from 'react-native-action-button';
 
 
 export default class ListDidntSyncSalesPage extends React.Component {
-  
+
   static navigationOptions = ({ navigation }) => {
     return {
       headerRight: (
         <View style={styles.header}>
-          <TouchableOpacity 
+          <TouchableOpacity
            style={{marginRight: 20}}>
           <Icon name='search' color='white' />
           </TouchableOpacity>
-          
-      
+
+
         </View>
-      ),
-      headerLeft:(
-       <TouchableOpacity
-         style={{marginLeft: 20}}>
-         <Icon name='arrow-back' color='white' />
-         </TouchableOpacity>
       )
     }
   };
 
-  
+
 
   render() {
-    
+
     const list = [{ title: 'Trips', subtitle: 'Nome empresa' },{ title: 'Trips', subtitle: 'Nome empresa'  },{ title: 'Trips', subtitle: 'Nome empresa'},{ title: 'Trips', subtitle: 'Nome empresa'},{ title: 'Trips', subtitle: 'Nome empresa'  },{ title: 'Trips', subtitle: 'Nome empresa' }
                 ,{ title: 'Trips', subtitle: 'Nome empresa'  },{ title: 'Trips', subtitle: 'Nome empresa'  },{ title: 'Trips', subtitle: 'Nome empresa'  },{ title: 'Trips', subtitle: 'Nome empresa'  },{ title: 'Trips', subtitle: 'Nome empresa'  },{ title: 'Trips', subtitle: 'Nome empresa'},{ title: 'Trips', subtitle: 'Nome empresa' }
                 ,{ title: 'Trips', subtitle: 'Nome empresa'  },{ title: 'Trips', subtitle: 'Nome empresa'  },{ title: 'Trips', subtitle: 'Nome empresa'  },{ title: 'Trips', subtitle: 'Nome empresa'  },{ title: 'Trips', subtitle: 'Nome empresa'  },{ title: 'Trips', subtitle: 'Nome empresa'  },{ title: 'Trips', subtitle: 'Nome empresa'}
@@ -46,7 +40,7 @@ export default class ListDidntSyncSalesPage extends React.Component {
       <View>
         <ScrollView>
 
-        
+
         <View style={styles.container}>
 
         <Text style={ styles.title }>Vendas não Sincronizadas</Text>
@@ -89,7 +83,7 @@ const styles = StyleSheet.create({
     fontSize: 20,
     textAlign: 'center',
     marginTop: 20,
-    
+
   },
   header:{
     flex: 1,

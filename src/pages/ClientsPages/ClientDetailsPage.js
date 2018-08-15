@@ -17,16 +17,10 @@ import ModalList from '../../components/ModalList';
 
 
 export default class ClientDetailsPage extends Component {
-   
+
    static navigationOptions = ({ navigation }) => {
     return {
       
-      headerLeft:(
-       <TouchableOpacity
-         style={{marginLeft: 20}}>
-         <Icon name='arrow-back' color='white' />
-         </TouchableOpacity>
-      ),
       headerRight:(
        <TouchableOpacity
          style={{marginRight: 20}}>
@@ -40,7 +34,7 @@ export default class ClientDetailsPage extends Component {
     return (
       <ScrollView>
       <Card>
-        
+
         <Text style={ styles.title }>Detalhes do Cliente</Text>
         <ModalList style={ styles.modal } ref={'ModalList'}></ModalList>
       <View style={styles.container}>
@@ -54,7 +48,7 @@ export default class ClientDetailsPage extends Component {
               <FormDetails NomeCampo={'Cidade'} ValorCampo={' Dourados'}/>
               <FormDetails NomeCampo={'Uf'} ValorCampo={' MS'}/>
             </View>
-            
+
             <View style={styles.container2}>
               <FormDetails NomeCampo={'CPF/CNPJ'} ValorCampo={' 688.535.435-44'}/>
               <FormDetails NomeCampo={'RG'} ValorCampo={' 34.542.645-2'}/>
@@ -83,7 +77,7 @@ export default class ClientDetailsPage extends Component {
 }
 
 const styles = StyleSheet.create({
- 
+
   title:{
     fontSize: 20,
     marginTop: 5,
@@ -102,7 +96,7 @@ const styles = StyleSheet.create({
     marginBottom: 10,
     flex: 1,
     width: 293
-    
+
   },
     header:{
     flex: 1,
@@ -111,6 +105,6 @@ const styles = StyleSheet.create({
   container2: {
     marginBottom: 10,
     flexDirection: 'row',
-    
+
   }
 });

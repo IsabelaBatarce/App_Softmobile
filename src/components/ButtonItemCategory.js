@@ -1,10 +1,10 @@
 import React from 'react';
 import { Text, Image, View, StyleSheet, TouchableOpacity } from 'react-native';
 
-const ButtonItemCategory = ({ nameCategory }) => {
+const ButtonItemCategory = ({ nameCategory, _onPressButton }) => {
     return(
 
-        <TouchableOpacity style={ styles.button } onPress={this._onPressButton}>
+        <TouchableOpacity style={ styles.button } onPress={_onPressButton}>
           <Text style={ styles.nameCategoryStyle }>{nameCategory}</Text>
         </TouchableOpacity>
     )

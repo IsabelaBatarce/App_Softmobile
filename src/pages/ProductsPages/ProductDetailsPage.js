@@ -11,19 +11,9 @@ import FormDetails from '../../components/FormDetails';
 import {Card, Icon} from 'react-native-elements';
 
 export default class ProductDetailsPage extends Component {
- 
- static navigationOptions = ({ navigation }) => {
-    return {
-      
-      headerLeft:(
-       <TouchableOpacity
-         style={{marginLeft: 20}}>
-         <Icon name='arrow-back' color='white' />
-         </TouchableOpacity>
-      )
-    }
-  };
-  
+
+
+
   render() {
     return (
       <ScrollView>
@@ -59,7 +49,7 @@ const styles = StyleSheet.create({
     fontSize: 20,
     marginTop: 5,
     marginBottom: 10,
-    color: '#212121', 
+    color: '#212121',
     alignSelf: 'center'
   },
   container: {
@@ -82,7 +72,6 @@ const styles = StyleSheet.create({
     marginTop: 10,
     marginBottom: 10,
     flexDirection: 'row',
-    
+
   }
 });
-

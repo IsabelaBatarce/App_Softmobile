@@ -18,7 +18,7 @@ export default class test extends Component {
     this._onPressAdd = this._onPressAdd.bind(this);
   }
 
-  static navigationOptions = ({ navigation }) => {
+  static navigationOptions = ({ navigation, goBack }) => {
       return {
         headerRight: (
           <View style={styles.header}>
@@ -29,8 +29,7 @@ export default class test extends Component {
            </TouchableOpacity>
           </View>
 
-        ),
-
+        )
       }
     };
 
