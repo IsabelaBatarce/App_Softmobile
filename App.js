@@ -2,8 +2,9 @@ import { createStackNavigator } from 'react-navigation';
 import React from 'react';
 import { Image, View, TouchableOpacity, Text } from 'react-native';
 import { Toolbar } from 'react-native-material-ui';
+import { MaterialHeaderButtons, Items } from './src/components/MyHeaderButtons';
 
-import SearchBar from './src/components/SearchBar';
+import Search from './src/components/Search';
 import ListSyncSalesPage from './src/pages/SalesPages/ListSyncSalesPage';
 import FilterSyncSalesPage from './src/pages/SalesPages/FilterSyncSalesPage';
 import ListSyncErrorSalesPage from './src/pages/SalesPages/ListSyncErrorSalesPage';
@@ -41,16 +42,10 @@ class LogoTitle extends React.Component {
 };
 
 const RootStack = createStackNavigator({
-'ListSalesPage':{
-      screen: ListSalesPage
-    },
-'test':{
-  screen:test
-} ,
-'FilterSyncSalesPage':{
-  screen:FilterSyncSalesPage
-},
-
+  
+  'ListClientPage':{
+      screen: ListClientPage,
+  },
   'Login': {
        screen: PrimaryLogin,
        navigationOptions:{
@@ -61,28 +56,45 @@ const RootStack = createStackNavigator({
            }
        }
      },
-     'SecondaryLogin': {
+  'SecondaryLogin': {
             screen: SecondaryLogin,
             navigationOptions:{
               headerTitle: <LogoTitle />,
-            headerStyle: {
+              headerLeft: null,
+              headerStyle: {
                 backgroundColor: '#e24d4d',
                 height: 250
                 }
+                
             }
           },
-
-'ListClientPage':{
-      screen: ListClientPage,
-   },
-'ListProductsPage':{
-    screen:ListProductsPage
+'ListSalesPage':{
+      screen: ListSalesPage,
+      navigationOptions:{
+      headerRight: (
+    <MaterialHeaderButtons>
+      <Items title="Search" iconName="search" onPress={() => console.warn('add')} />
+    </MaterialHeaderButtons>
+      )
+    }
   },
-'ListClientPage':{
-      screen: ListClientPage,
-   },
- 'ListClientPage':{
-     screen: ListClientPage,
+
+'FilterSyncSalesPage':{
+  screen:FilterSyncSalesPage
+},
+
+'ListProductsPage':{
+    screen:ListProductsPage,
+
+    navigationOptions:{
+        
+        headerRight: (
+          <MaterialHeaderButtons>
+            <Items title="Search" iconName="search" color="white" onPress={() => console.warn('add')} />
+          </MaterialHeaderButtons>
+          
+      ),
+    }
   },
 
  'ProductDetailsPage':{
@@ -96,13 +108,33 @@ const RootStack = createStackNavigator({
 
 
 'ListDidntSyncSalesPage':{
-    screen:ListDidntSyncSalesPage
+    screen:ListDidntSyncSalesPage,
+
+    navigationOptions:{
+        
+        headerRight: (
+          <MaterialHeaderButtons>
+            <Items title="Search" iconName="search" color="white" onPress={() => console.warn('add')} />
+          </MaterialHeaderButtons>
+          
+      ),
+    }
  },
 
 
 
  'ListSyncSalesPage':{
-    screen:ListSyncSalesPage
+    screen:ListSyncSalesPage,
+
+    navigationOptions:{
+        
+        headerRight: (
+          <MaterialHeaderButtons>
+            <Items title="Search" iconName="search" color="white" onPress={() => console.warn('add')} />
+          </MaterialHeaderButtons>
+          
+      ),
+    }
  },
 
   'AddClientPage':{
@@ -110,8 +142,18 @@ const RootStack = createStackNavigator({
    },
 
  'ClientDetailsPage': {
-      screen: ClientDetailsPage
-    },
+      screen: ClientDetailsPage,
+
+      navigationOptions:{
+        
+        headerRight: (
+          <MaterialHeaderButtons>
+            <Items title="Search" iconName="more-vert" color="white" onPress={() => console.warn('add')} />
+          </MaterialHeaderButtons>
+          
+      ),
+    }
+  },
 
 
     'MenuPage': {

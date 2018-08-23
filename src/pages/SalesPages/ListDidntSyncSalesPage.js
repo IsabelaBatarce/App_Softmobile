@@ -13,23 +13,6 @@ import ActionButton from 'react-native-action-button';
 
 export default class ListDidntSyncSalesPage extends React.Component {
 
-  static navigationOptions = ({ navigation }) => {
-    return {
-      headerRight: (
-        <View style={styles.header}>
-          <TouchableOpacity
-           style={{marginRight: 20}}>
-          <Icon name='search' color='white' />
-          </TouchableOpacity>
-
-
-        </View>
-      )
-    }
-  };
-
-
-
   render() {
 
     const list = [{ title: 'Trips', subtitle: 'Nome empresa' },{ title: 'Trips', subtitle: 'Nome empresa'  },{ title: 'Trips', subtitle: 'Nome empresa'},{ title: 'Trips', subtitle: 'Nome empresa'},{ title: 'Trips', subtitle: 'Nome empresa'  },{ title: 'Trips', subtitle: 'Nome empresa' }

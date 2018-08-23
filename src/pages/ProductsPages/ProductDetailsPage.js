@@ -12,8 +12,6 @@ import {Card, Icon} from 'react-native-elements';
 
 export default class ProductDetailsPage extends Component {
 
-
-
   render() {
     return (
       <ScrollView>

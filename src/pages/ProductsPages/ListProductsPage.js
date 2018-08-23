@@ -15,24 +15,7 @@ import { List, ListItem, Icon } from 'react-native-elements';
 
 
 
-export default class ListItemProductPage extends React.Component {
-
-
-  static navigationOptions = ({ navigation }) => {
-    return {
-      headerRight: (
-        <View style={styles.header}>
-          <TouchableOpacity
-           style={{marginRight: 20}}>
-          <Icon name='search' color='white' />
-          </TouchableOpacity>
-
-
-        </View>
-      )
-    }
-  };
-
+export default class ListProductsPage extends React.Component {
 
   render() {
 

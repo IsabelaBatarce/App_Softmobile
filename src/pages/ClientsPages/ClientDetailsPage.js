@@ -17,19 +17,6 @@ import ModalList from '../../components/ModalList';
 
 
 export default class ClientDetailsPage extends Component {
-
-   static navigationOptions = ({ navigation }) => {
-    return {
-      
-      headerRight:(
-       <TouchableOpacity
-         style={{marginRight: 20}}>
-         <Icon name='more-vert' color='white' />
-         </TouchableOpacity>
-      )
-    }
-  };
-
     render() {
     return (
       <ScrollView>

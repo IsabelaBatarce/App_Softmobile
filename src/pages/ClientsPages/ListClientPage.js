@@ -8,38 +8,12 @@ import {   View,
   Alert
    } from 'react-native';
 import ActionButton from 'react-native-action-button';
-import { List, ListItem, Icon } from 'react-native-elements';
+import { List, ListItem, Icon, SearchBar } from 'react-native-elements';
 
-import SearchBar from '../../components/SearchBar';
 
-export default class test extends Component {
-  constructor(props){
-    super(props);
-    this._onPressAdd = this._onPressAdd.bind(this);
-  }
-
-  static navigationOptions = ({ navigation, goBack }) => {
-      return {
-        headerRight: (
-          <View style={styles.header}>
-           <TouchableOpacity
-           onPress={ navigation.getParam('_OnPressAdd') }
-           style={{marginRight: 20}}>
-           <Icon name='search' color='white' />
-           </TouchableOpacity>
-          </View>
-
-        )
-      }
-    };
-
-    componentWillMount() {
-      this.props.navigation.setParams({ _OnPressAdd: this._onPressAdd });
-    }
-
-    _onPressAdd(){
-      this.refs.ModalSearchBar.showAddModal();
-    }
+export default class ListClientPage extends Component {
+  
+    
 
   render() {
     const list = [{ title: 'Trips', subtitle: 'Nome empresa' },{ title: 'Trips', subtitle: 'Nome empresa'  },{ title: 'Trips', subtitle: 'Nome empresa'},{ title: 'Trips', subtitle: 'Nome empresa'},{ title: 'Trips', subtitle: 'Nome empresa'  },{ title: 'Trips', subtitle: 'Nome empresa' }
@@ -49,10 +23,9 @@ export default class test extends Component {
 
     return (
       <View style={styles.container}>
-
-        <SearchBar ref={'ModalSearchBar'}/>
-
-       <ScrollView>
+ 
+        
+      <ScrollView>
 
 <Text style={ styles.title }>Clientes</Text>
 

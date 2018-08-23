@@ -16,9 +16,6 @@ import ButtonI from '../../components/ButtonI';
 import { FormLabel, FormInput, FormValidationMessage } from 'react-native-elements'
 
 export default class AddClientPage extends React.Component {
-
-
-
 	render() {
 	    return (
 	    <View style = {styles.container}>
