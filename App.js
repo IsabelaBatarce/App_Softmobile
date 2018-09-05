@@ -51,6 +51,7 @@ const RootStack = createStackNavigator({
   screen:FilterSyncSalesPage
 },
 
+
   'Login': {
        screen: PrimaryLogin,
        navigationOptions:{
