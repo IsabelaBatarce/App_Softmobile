@@ -21,6 +21,7 @@ import ListClientPage from './src/pages/ClientsPages/ListClientPage';
 import ListSalesPage from './src/pages/SalesPages/ListSalesPage';
 import ProductDetailsPage from './src/pages/ProductsPages/ProductDetailsPage';
 import ClientDetailsPage from './src/pages/ClientsPages/ClientDetailsPage';
+import GridsScreen from './src/pages/GridsScreen';
 
 
 
@@ -43,9 +44,7 @@ class LogoTitle extends React.Component {
 
 const RootStack = createStackNavigator({
   
-  'ListClientPage':{
-      screen: ListClientPage,
-  },
+ 
   'Login': {
        screen: PrimaryLogin,
        navigationOptions:{
@@ -77,6 +76,13 @@ const RootStack = createStackNavigator({
     </MaterialHeaderButtons>
       )
     }
+  },
+   
+    'MenuPage': {
+      screen: MenuPage
+    },
+  'ListClientPage':{
+      screen: ListClientPage,
   },
 
 'FilterSyncSalesPage':{
@@ -154,11 +160,6 @@ const RootStack = createStackNavigator({
       ),
     }
   },
-
-
-    'MenuPage': {
-      screen: MenuPage
-    },
 
     'CategoryItensPage': {
       screen: CategoryItensPage

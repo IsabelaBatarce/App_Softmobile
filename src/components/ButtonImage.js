@@ -1,25 +1,24 @@
 import React from 'react';
-import { Text, Image, View, StyleSheet, TouchableOpacity } from 'react-native';
+import { Text, Image, View, StyleSheet, TouchableOpacity, Dimensions } from 'react-native';
 
 const ButtonImage = ({ onPressButton, imgBtnMenu }) => {
     return(
-        <TouchableOpacity onPress={ onPressButton }>
-          <Image
-            style={styles.button}
-            source={ imgBtnMenu }
-          />
+        
+      <TouchableOpacity onPress={ onPressButton }>
+           < View styles={styles.background} > 
+            <Image
+              style={styles.button}
+              source={ imgBtnMenu }
+            />
+          </View>
         </TouchableOpacity>
     )
 }
 
 const styles = StyleSheet.create({
   button:{
-    width: 350,
-    height: 120,
-    marginTop: 15,
-    marginBottom: 15,
-    borderRadius: 6,
-    elevation: 4
+    height: 130,
+    margin: 5 
   },
 
 
