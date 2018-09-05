@@ -8,24 +8,8 @@ import ButtonI from '../../components/ButtonI';
 
 
 export default class SecondaryLogin extends React.Component {
- 
-  static navigationOptions = ({ navigation }) => {
-    return {
-        headerTitle:(<View style = {{
-                    flex: 1,
-                    alignItems: 'center',
-                    justifyContent: 'center',}}>
-              <Image
-                source={require('../../images/outline_perm_identity_white_48.png')}
-                style={{ width: 100, height:100 }}
-              />
-              </View>
-              )
-    }
-  }
 
-      
-  render() {
+ render() {
     return (
       <View style = {styles.container}>
         

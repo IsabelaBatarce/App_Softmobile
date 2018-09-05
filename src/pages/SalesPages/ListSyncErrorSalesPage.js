@@ -12,30 +12,6 @@ import ActionButton from 'react-native-action-button';
 
 
 export default class ListSyncErrorSalesPage extends React.Component {
-  
-  static navigationOptions = ({ navigation }) => {
-    return {
-      headerRight: (
-        <View style={styles.header}>
-          <TouchableOpacity 
-           style={{marginRight: 20}}>
-          <Icon name='search' color='white' />
-          </TouchableOpacity>
-          
-      
-        </View>
-      ),
-      headerLeft:(
-       <TouchableOpacity
-         style={{marginLeft: 20}}>
-         <Icon name='arrow-back' color='white' />
-         </TouchableOpacity>
-      )
-    }
-  };
-
-  
-
   render() {
     
     const list = [{ title: 'Trips', subtitle: 'Nome empresa' },{ title: 'Trips', subtitle: 'Nome empresa'  },{ title: 'Trips', subtitle: 'Nome empresa'},{ title: 'Trips', subtitle: 'Nome empresa'},{ title: 'Trips', subtitle: 'Nome empresa'  },{ title: 'Trips', subtitle: 'Nome empresa' }

@@ -10,44 +10,9 @@ import {
 import { List, ListItem, Icon } from 'react-native-elements';
 import ActionButton from 'react-native-action-button';
 import ModalList from '../../components/ModalList';
+import { MaterialHeaderButtons, Items } from '../../components/MyHeaderButtons';
 
 export default class ListSalesPage extends React.Component {
-
-  constructor(props){
-    super(props);
-    this._onPressAdd = this._onPressAdd.bind(this);
-  }
-
-
-  componentWillMount() {
-    this.props.navigation.setParams({ _OnPressAdd: this._onPressAdd });
-  }
-
-  _onPressAdd(){
-    this.refs.ModalList.showAddModal();
-  }
- 
-  static navigationOptions = ({ navigation }) => {
-    return {
-      headerRight: (
-        <View style={styles.header}>
-          <TouchableOpacity
-           style={{marginRight: 20}}>
-          <Icon name='search' color='white' />
-          </TouchableOpacity>
-
-         <TouchableOpacity
-          onPress={ navigation.getParam('_OnPressAdd') }
-          style={{marginRight: 20}}>
-          <Icon name='more-vert' color='white' />
-          </TouchableOpacity>
-
-        </View>
-      )
-    }
-  };
-
-
   render() {
 
     const list = [{ title: 'Trips', subtitle: 'Nome empresa' },{ title: 'Trips', subtitle: 'Nome empresa'  },{ title: 'Trips', subtitle: 'Nome empresa'},{ title: 'Trips', subtitle: 'Nome empresa'},{ title: 'Trips', subtitle: 'Nome empresa'  },{ title: 'Trips', subtitle: 'Nome empresa' }
@@ -56,7 +21,6 @@ export default class ListSalesPage extends React.Component {
                 ,{ title: 'Trips', subtitle: 'Nome empresa'  },{ title: 'Trips', subtitle: 'Nome empresa'  },{ title: 'Trips', subtitle: 'Nome empresa'  },{ title: 'Trips', subtitle: 'Nome empresa'  },{ title: 'Trips', subtitle: 'Nome empresa'  },{ title: 'Trips', subtitle: 'Nome empresa'  },{ title: 'Trips', subtitle: 'Nome empresa'  }]
    return (
       <View>
-        <ModalList style={ styles.modal } ref={'ModalList'}></ModalList>
        <ScrollView>
 
 
@@ -67,7 +31,7 @@ export default class ListSalesPage extends React.Component {
         <List>
           {
             list.map((item, i) => (
-             <TouchableOpacity onPress={ () => this.props.navigation.navigate('ItemCategoryPage') }>
+             <TouchableOpacity onPress={ () => this.props.navigation.navigate('ListClientPage') }>
 
               <ListItem
                 key={i}
